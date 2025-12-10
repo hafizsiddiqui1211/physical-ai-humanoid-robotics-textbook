@@ -65,6 +65,8 @@ const config = {
         logo: {
           alt: 'Robotics Textbook Logo',
           src: 'img/logo.svg',
+          href: '/',
+          target: '_self',
         },
         items: [
           {

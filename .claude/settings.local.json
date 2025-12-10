@@ -20,7 +20,26 @@
       "mcp__github__search_repositories",
       "Bash(git init)",
       "Bash(gh repo create hafizsiddiqui1211/physical-ai-humanoid-robotics-textbook --public --description \"A comprehensive textbook on Physical AI and Humanoid Robotics using Docusaurus\" --confirm)",
-      "Bash(git add .)"
+      "Bash(git add .)",
+      "Bash(git commit -m \"Initial commit: Physical AI & Humanoid Robotics Textbook\n\n- Complete textbook implementation with Docusaurus\n- All chapters created: foundations, systems, simulation, AI, humanoid, VLA, and capstone\n- Configuration set up for GitHub Pages deployment\n- Includes 12+ chapters with 50+ code examples and 20+ diagrams\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>\")",
+      "Bash(git add README.md)",
+      "Bash(git commit -m \"Add root README file\n\n- Provides project overview\n- Includes deployment and development instructions\n- Documents content structure\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>\")",
+      "Bash(git add GITHUB_DEPLOYMENT_INSTRUCTIONS.md)",
+      "Bash(git commit -m \"Add GitHub Pages deployment instructions\n\n- Provides step-by-step instructions for creating repository\n- Includes git remote setup and push commands\n- Documents GitHub Pages configuration\n- Provides alternative GitHub Actions workflow\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>\")",
+      "Bash(powershell -Command \"Get-Content specs/001-textbook-ai-robotics/checklists/requirements.md,specs/001-textbook-ai-robotics/checklists/textbook-requirements.md | Select-String ''\\- \\[(X|x| )\\]'' | ForEach-Object { if($_-match ''\\- \\[X\\]|\\- \\[x\\]'') { ''completed'' } else { ''incomplete'' } } | Group-Object | Select-Object Name, Count\")",
+      "Bash(powershell -Command \"(Select-String -Path ''specs/001-textbook-ai-robotics/checklists/*.md'' -Pattern ''\\- \\[(X|x| )\\]'').Count\")",
+      "Bash(powershell -Command \"(Select-String -Path ''specs/001-textbook-ai-robotics/checklists/*.md'' -Pattern ''\\- \\[X\\]'').Count\")",
+      "Bash(powershell -Command \"(Select-String -Path ''specs/001-textbook-ai-robotics/checklists/*.md'' -Pattern ''- \\[ \\]|- \\[X\\]|- \\[x\\]'').Count\")",
+      "Bash(powershell -Command \"(Select-String -Path ''specs/001-textbook-ai-robotics/checklists/*.md'' -Pattern ''- \\[X\\]|- \\[x\\]'').Count\")",
+      "Bash(dir \"E:\\AI-Spec-Driven-Online-Hackathon-1\\docusaurus\\src\\pages\" /s)",
+      "Bash(dir \"E:\\AI-Spec-Driven-Online-Hackathon-1\\docusaurus\\src\\pages\")",
+      "Bash(npm run serve)",
+      "WebFetch(domain:docusaurus.io)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "mcp__context7__resolve-library-id",
+      "mcp__context7__get-library-docs",
+      "Bash(git remote add origin https://github.com/hafizsiddiqui1211/physical-ai-humanoid-robotics-textbook.git)",
+      "Bash(git add:*)"
     ]
   }
 }

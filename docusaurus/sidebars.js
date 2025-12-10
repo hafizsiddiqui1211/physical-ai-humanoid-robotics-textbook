@@ -4,6 +4,9 @@
 const sidebars = {
   tutorialSidebar: [
     'intro',
+    'syllabus',
+    'course-outline',
+    'learning-outcomes',
     {
       type: 'category',
       label: 'Foundations',
