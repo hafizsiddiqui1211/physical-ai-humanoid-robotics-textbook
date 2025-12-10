@@ -1,12 +1,11 @@
 ---
-
-description: "Task list template for feature implementation"
+description: "Task list for Physical AI & Humanoid Robotics Textbook implementation"
 ---
 
-# Tasks: [FEATURE NAME]
+# Tasks: Physical AI & Humanoid Robotics Textbook
 
-**Input**: Design documents from `/specs/[###-feature-name]/`
-**Prerequisites**: plan.md (required), spec.md (required for user stories), research.md, data-model.md, contracts/
+**Input**: Design documents from `/specs/001-textbook-ai-robotics/`
+**Prerequisites**: plan.md (required), spec.md (required for user stories), research.md, data-model.md, contracts/, quickstart.md
 
 **Tests**: The examples below include test tasks. Tests are OPTIONAL - only include them if explicitly requested in the feature specification.
 
@@ -20,26 +19,28 @@ description: "Task list template for feature implementation"
 
 ## Path Conventions
 
-- **Single project**: `src/`, `tests/` at repository root
-- **Web app**: `backend/src/`, `frontend/src/`
-- **Mobile**: `api/src/`, `ios/src/` or `android/src/`
-- Paths shown below assume single project - adjust based on plan.md structure
+- **Docusaurus project**: `docusaurus/` at repository root
+- **Textbook content**: `docusaurus/docs/`
+- **Components**: `docusaurus/src/components/`
+- **Pages**: `docusaurus/src/pages/`
+- **Static assets**: `docusaurus/static/`
+- **Configuration**: `docusaurus/` root files
 
-<!-- 
+<!--
   ============================================================================
   IMPORTANT: The tasks below are SAMPLE TASKS for illustration purposes only.
-  
+
   The /sp.tasks command MUST replace these with actual tasks based on:
   - User stories from spec.md (with their priorities P1, P2, P3...)
   - Feature requirements from plan.md
   - Entities from data-model.md
   - Endpoints from contracts/
-  
+
   Tasks MUST be organized by user story so each story can be:
   - Implemented independently
   - Tested independently
   - Delivered as an MVP increment
-  
+
   DO NOT keep these sample tasks in the generated tasks.md file.
   ============================================================================
 -->
@@ -49,7 +50,7 @@ description: "Task list template for feature implementation"
 **Purpose**: Project initialization and basic structure
 
 - [ ] T001 Create Docusaurus project structure per implementation plan
-- [ ] T002 Initialize Docusaurus project with required dependencies for robotics textbook
+- [ ] T002 Initialize Docusaurus project with required dependencies
 - [ ] T003 [P] Configure linting and formatting tools for Markdown/MDX files
 
 ---
@@ -63,9 +64,9 @@ description: "Task list template for feature implementation"
 Examples of foundational tasks (adjust based on your project):
 
 - [ ] T004 Setup Docusaurus configuration for textbook deployment to GitHub Pages
-- [ ] T005 [P] Configure navigation structure for textbook chapters and modules
-- [ ] T006 [P] Setup basic textbook layout and styling framework
-- [ ] T007 Create base content structure that all chapters depend on
+- [ ] T005 [P] Configure navigation structure for textbook chapters and modules in sidebars.js
+- [ ] T006 [P] Setup basic textbook layout and styling framework in docusaurus.config.js
+- [ ] T007 Create base content structure that all chapters depend on in docusaurus/src/
 - [ ] T008 Configure build and deployment pipeline for GitHub Pages
 - [ ] T009 Setup environment configuration management for different deployment targets
 
@@ -73,76 +74,76 @@ Examples of foundational tasks (adjust based on your project):
 
 ---
 
-## Phase 3: User Story 1 - [Title] (Priority: P1) 🎯 MVP
+## Phase 3: User Story 1 - Textbook Access and Navigation (Priority: P1) 🎯 MVP
 
-**Goal**: [Brief description of what this story delivers]
+**Goal**: Students can access the Physical AI & Humanoid Robotics textbook online and navigate through its structured content
 
-**Independent Test**: [How to verify this story works on its own]
+**Independent Test**: The textbook can be successfully built with Docusaurus, deployed to GitHub Pages, and students can navigate from the introduction through to the first module with clear, intuitive navigation controls and proper linking between sections.
 
 ### Tests for User Story 1 (OPTIONAL - only if tests requested) ⚠️
 
 > **NOTE: Write these tests FIRST, ensure they FAIL before implementation**
 
-- [ ] T010 [P] [US1] Content validation test for [chapter/module] in tests/content-validation/test_[name].md
-- [ ] T011 [P] [US1] Technical accuracy verification for [robotics concept] in tests/accuracy/test_[name].md
+- [ ] T010 [P] [US1] Content validation test for textbook navigation in tests/content-validation/test_navigation.md
+- [ ] T011 [P] [US1] Textbook build validation test in tests/build-validation/test_build.md
 
 ### Implementation for User Story 1
 
-- [ ] T012 [P] [US1] Create [Chapter 1] content in docs/chapter1/[topic].mdx
-- [ ] T013 [P] [US1] Create [Code example 1] in docs/chapter1/examples/[example].py
-- [ ] T014 [US1] Implement [diagram/illustration] for [concept] in docs/chapter1/assets/[diagram].mdx
-- [ ] T015 [US1] Add ROS 2 integration content to [chapter] in docs/[location]/[file].mdx
-- [ ] T016 [US1] Add validation for technical accuracy and student comprehension
+- [ ] T012 [P] [US1] Create introductory chapter in docusaurus/docs/intro.md
+- [ ] T013 [P] [US1] Create basic textbook structure in docusaurus/docs/
+- [ ] T014 [US1] Implement basic navigation in sidebars.js for core chapters
+- [ ] T015 [US1] Add search functionality in docusaurus.config.js
+- [ ] T016 [US1] Add validation for textbook build process and navigation
 - [ ] T017 [US1] Add cross-references and links to related concepts
 
 **Checkpoint**: At this point, User Story 1 should be fully functional and testable independently
 
 ---
 
-## Phase 4: User Story 2 - [Title] (Priority: P2)
+## Phase 4: User Story 2 - ROS 2 Nervous System Learning (Priority: P2)
 
-**Goal**: [Brief description of what this story delivers]
+**Goal**: Students can understand how ROS 2 serves as the "nervous system" of robots through comprehensive tutorials, code examples, and practical exercises
 
-**Independent Test**: [How to verify this story works on its own]
+**Independent Test**: Students can complete the ROS 2 module by following tutorials, running provided code examples, and implementing basic ROS 2 communication patterns (publishers, subscribers, services) on their local development environment.
 
 ### Tests for User Story 2 (OPTIONAL - only if tests requested) ⚠️
 
-- [ ] T018 [P] [US2] Content validation test for [chapter/module] in tests/content-validation/test_[name].md
-- [ ] T019 [P] [US2] Technical accuracy verification for [robotics concept] in tests/accuracy/test_[name].md
+- [ ] T018 [P] [US2] Content validation test for ROS 2 module in tests/content-validation/test_ros2.md
+- [ ] T019 [P] [US2] Code example execution test for ROS 2 examples in tests/code-validation/test_ros2_examples.md
 
 ### Implementation for User Story 2
 
-- [ ] T020 [P] [US2] Create [Chapter 2] content in docs/chapter2/[topic].mdx
-- [ ] T021 [US2] Implement [simulation content] in docs/chapter2/[simulation].mdx
-- [ ] T022 [US2] Add Isaac Sim integration content to [chapter] in docs/[location]/[file].mdx
+- [ ] T020 [P] [US2] Create ROS 2 Nervous System chapter in docusaurus/docs/systems/ros2-nervous-system.md
+- [ ] T021 [US2] Implement ROS 2 tutorials with code examples in docusaurus/docs/systems/
+- [ ] T022 [US2] Add ROS 2 code examples in docusaurus/docs/systems/examples/
 - [ ] T023 [US2] Integrate with User Story 1 components (if needed)
 
 **Checkpoint**: At this point, User Stories 1 AND 2 should both work independently
 
 ---
 
-## Phase 5: User Story 3 - [Title] (Priority: P3)
+## Phase 5: User Story 3 - Simulation-to-Real Transfer Learning (Priority: P3)
 
-**Goal**: [Brief description of what this story delivers]
+**Goal**: Students can learn how to develop robot behaviors in simulation (Isaac Sim, Gazebo, Unity) and transfer them to real hardware
 
-**Independent Test**: [How to verify this story works on its own]
+**Independent Test**: Students can follow the sim-to-real transfer workflow by implementing a behavior in simulation, understanding the differences between sim and real, and successfully deploying to physical hardware following the textbook's guidance.
 
 ### Tests for User Story 3 (OPTIONAL - only if tests requested) ⚠️
 
-- [ ] T024 [P] [US3] Content validation test for [chapter/module] in tests/content-validation/test_[name].md
-- [ ] T025 [P] [US3] Technical accuracy verification for [robotics concept] in tests/accuracy/test_[name].md
+- [ ] T024 [P] [US3] Content validation test for sim-to-real module in tests/content-validation/test_sim_to_real.md
+- [ ] T025 [P] [US3] Technical accuracy verification for sim-to-real workflows in tests/accuracy/test_sim_real.md
 
 ### Implementation for User Story 3
 
-- [ ] T026 [P] [US3] Create [Chapter 3] content in docs/chapter3/[topic].mdx
-- [ ] T027 [US3] Implement [hardware integration content] in docs/chapter3/[hardware].mdx
-- [ ] T028 [US3] Add safety considerations content to [chapter] in docs/[location]/[file].mdx
+- [ ] T026 [P] [US3] Create simulation-to-real transfer chapter in docusaurus/docs/simulation/digital-twin-isaac.md
+- [ ] T027 [US3] Implement sim-to-real workflow content in docusaurus/docs/simulation/
+- [ ] T028 [US3] Add Isaac Sim integration content to simulation chapters in docusaurus/docs/simulation/
 
 **Checkpoint**: All user stories should now be independently functional
 
 ---
 
-[Add more user story phases as needed, following the same pattern]
+[Add more user stories as needed, following the same pattern]
 
 ---
 
@@ -193,18 +194,16 @@ Examples of foundational tasks (adjust based on your project):
 - Models within a story marked [P] can run in parallel
 - Different user stories can be worked on in parallel by different team members
 
----
-
-## Parallel Example: User Story 1
+### Parallel Example: User Story 1
 
 ```bash
 # Launch all tests for User Story 1 together (if tests requested):
-Task: "Contract test for [endpoint] in tests/contract/test_[name].py"
-Task: "Integration test for [user journey] in tests/integration/test_[name].py"
+Task: "Content validation test for textbook navigation in tests/content-validation/test_navigation.md"
+Task: "Textbook build validation test in tests/build-validation/test_build.md"
 
 # Launch all models for User Story 1 together:
-Task: "Create [Entity1] model in src/models/[entity1].py"
-Task: "Create [Entity2] model in src/models/[entity2].py"
+Task: "Create introductory chapter in docusaurus/docs/intro.md"
+Task: "Create basic textbook structure in docusaurus/docs/"
 ```
 
 ---

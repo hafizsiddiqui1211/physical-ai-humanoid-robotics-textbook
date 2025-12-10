@@ -31,7 +31,15 @@
 
 *GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
 
-[Gates determined based on constitution file]
+This plan must comply with the Physical AI & Humanoid Robotics Textbook Constitution:
+- All technical descriptions must maintain accuracy & technical fidelity with official documentation
+- Content must be pedagogically clear for university-level robotics/AI students
+- All workflows must be engineered for reproducibility by students
+- Architectural explanations must maintain simulation-to-real consistency
+- All chapters must follow Spec-Driven development with Claude Code verification
+- All hardware-related instructions must include appropriate safety considerations
+- Content must follow structural, writing, and technical documentation standards
+- All constraints regarding format, deployment, and content requirements must be met
 
 ## Project Structure
 
