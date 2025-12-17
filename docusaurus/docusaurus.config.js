@@ -22,7 +22,6 @@ const config = {
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'hafizsiddiqui1211', // Usually your GitHub org/user name.
   projectName: 'physical-ai-humanoid-robotics-textbook', // Usually your repo name.
-  deploymentBranch: 'gh-pages', // Branch that GitHub Pages will deploy from.
 
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
@@ -65,7 +64,7 @@ const config = {
         logo: {
           alt: 'Robotics Textbook Logo',
           src: 'img/logo.svg',
-          href: '/',
+          href: '/physical-ai-humanoid-robotics-textbook/',
           target: '_self',
         },
         items: [
@@ -90,7 +89,7 @@ const config = {
             items: [
               {
                 label: 'Textbook',
-                to: '/docs/intro',
+                to: 'docs/intro',
               },
             ],
           },
