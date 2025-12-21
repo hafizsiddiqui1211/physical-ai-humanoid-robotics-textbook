@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-simulation/digital-twin-isaac" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">Digital Twin: Isaac Sim | Physical AI &amp; Humanoid Robotics Textbook</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://hafizsiddiqui1211.github.io/physical-ai-humanoid-robotics-textbook/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://hafizsiddiqui1211.github.io/physical-ai-humanoid-robotics-textbook/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://hafizsiddiqui1211.github.io/physical-ai-humanoid-robotics-textbook/docs/simulation/digital-twin-isaac"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Digital Twin: Isaac Sim | Physical AI &amp; Humanoid Robotics Textbook"><meta data-rh="true" name="description" content="Introduction to Isaac Sim"><meta data-rh="true" property="og:description" content="Introduction to Isaac Sim"><link data-rh="true" rel="icon" href="/physical-ai-humanoid-robotics-textbook/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://hafizsiddiqui1211.github.io/physical-ai-humanoid-robotics-textbook/docs/simulation/digital-twin-isaac"><link data-rh="true" rel="alternate" href="https://hafizsiddiqui1211.github.io/physical-ai-humanoid-robotics-textbook/docs/simulation/digital-twin-isaac" hreflang="en"><link data-rh="true" rel="alternate" href="https://hafizsiddiqui1211.github.io/physical-ai-humanoid-robotics-textbook/docs/simulation/digital-twin-isaac" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Digital Twin: Isaac Sim","item":"https://hafizsiddiqui1211.github.io/physical-ai-humanoid-robotics-textbook/docs/simulation/digital-twin-isaac"}]}</script><link rel="stylesheet" href="/physical-ai-humanoid-robotics-textbook/assets/css/styles.f8adb39b.css">
+<script src="/physical-ai-humanoid-robotics-textbook/assets/js/runtime~main.31028975.js" defer="defer"></script>
+<script src="/physical-ai-humanoid-robotics-textbook/assets/js/main.79d754bc.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" target="_self" href="/physical-ai-humanoid-robotics-textbook/"><div class="navbar__logo"><img src="/physical-ai-humanoid-robotics-textbook/img/logo.svg" alt="Robotics Textbook Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/physical-ai-humanoid-robotics-textbook/img/logo.svg" alt="Robotics Textbook Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">Physical AI &amp; Humanoid Robotics</b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/physical-ai-humanoid-robotics-textbook/docs/intro">Textbook</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href="https://github.com/hafizsiddiqui1211/physical-ai-humanoid-robotics-textbook" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/physical-ai-humanoid-robotics-textbook/docs/intro"><span title="Introduction to Physical AI &amp; Humanoid Robotics" class="linkLabel_WmDU">Introduction to Physical AI &amp; Humanoid Robotics</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/physical-ai-humanoid-robotics-textbook/docs/syllabus"><span title="Syllabus: Physical AI &amp; Humanoid Robotics" class="linkLabel_WmDU">Syllabus: Physical AI &amp; Humanoid Robotics</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/physical-ai-humanoid-robotics-textbook/docs/course-outline"><span title="Course Outline: Physical AI &amp; Humanoid Robotics" class="linkLabel_WmDU">Course Outline: Physical AI &amp; Humanoid Robotics</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/physical-ai-humanoid-robotics-textbook/docs/learning-outcomes"><span title="Learning Outcomes: Physical AI &amp; Humanoid Robotics" class="linkLabel_WmDU">Learning Outcomes: Physical AI &amp; Humanoid Robotics</span></a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/physical-ai-humanoid-robotics-textbook/docs/foundations/physical-ai"><span title="Foundations" class="categoryLinkLabel_W154">Foundations</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/physical-ai-humanoid-robotics-textbook/docs/systems/ros2-nervous-system"><span title="Systems" class="categoryLinkLabel_W154">Systems</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" href="/physical-ai-humanoid-robotics-textbook/docs/simulation/digital-twin-gazebo"><span title="Simulation" class="categoryLinkLabel_W154">Simulation</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/physical-ai-humanoid-robotics-textbook/docs/simulation/digital-twin-gazebo"><span title="Digital Twin: Gazebo Simulation" class="linkLabel_WmDU">Digital Twin: Gazebo Simulation</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/physical-ai-humanoid-robotics-textbook/docs/simulation/digital-twin-isaac"><span title="Digital Twin: Isaac Sim" class="linkLabel_WmDU">Digital Twin: Isaac Sim</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/physical-ai-humanoid-robotics-textbook/docs/simulation/digital-twin-unity"><span title="Digital Twin: Unity Simulation" class="linkLabel_WmDU">Digital Twin: Unity Simulation</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/physical-ai-humanoid-robotics-textbook/docs/ai/isaac-ros-pipelines"><span title="AI &amp; Perception" class="categoryLinkLabel_W154">AI &amp; Perception</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/physical-ai-humanoid-robotics-textbook/docs/humanoid/kinematics-dynamics"><span title="Humanoid Robotics" class="categoryLinkLabel_W154">Humanoid Robotics</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/physical-ai-humanoid-robotics-textbook/docs/vla/vision-language-action"><span title="Vision-Language-Action" class="categoryLinkLabel_W154">Vision-Language-Action</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/physical-ai-humanoid-robotics-textbook/docs/capstone/capstone-project"><span title="Capstone Project" class="categoryLinkLabel_W154">Capstone Project</span></a></div></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/physical-ai-humanoid-robotics-textbook/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">Simulation</span></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">Digital Twin: Isaac Sim</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Digital Twin: Isaac Sim</h1></header>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="introduction-to-isaac-sim">Introduction to Isaac Sim<a href="#introduction-to-isaac-sim" class="hash-link" aria-label="Direct link to Introduction to Isaac Sim" title="Direct link to Introduction to Isaac Sim" translate="no">​</a></h2>
+<p>Isaac Sim is NVIDIA&#x27;s comprehensive robotics simulation platform built on the Omniverse platform. It provides photorealistic rendering, accurate physics simulation, and seamless integration with AI development workflows. Isaac Sim is particularly powerful for Vision-Language-Action (VLA) systems, synthetic data generation, and sim-to-real transfer learning.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="core-architecture">Core Architecture<a href="#core-architecture" class="hash-link" aria-label="Direct link to Core Architecture" title="Direct link to Core Architecture" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="omniverse-foundation">Omniverse Foundation<a href="#omniverse-foundation" class="hash-link" aria-label="Direct link to Omniverse Foundation" title="Direct link to Omniverse Foundation" translate="no">​</a></h3>
+<p>Isaac Sim is built on NVIDIA&#x27;s Omniverse platform:</p>
+<ul>
+<li class="">USD (Universal Scene Description) for scene representation</li>
+<li class="">PhysX for physics simulation</li>
+<li class="">RTX for photorealistic rendering</li>
+<li class="">Multi-GPU rendering support</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="ros-2-bridge">ROS 2 Bridge<a href="#ros-2-bridge" class="hash-link" aria-label="Direct link to ROS 2 Bridge" title="Direct link to ROS 2 Bridge" translate="no">​</a></h3>
+<ul>
+<li class="">Native ROS 2 integration</li>
+<li class="">Standard message types support</li>
+<li class="">Real-time communication</li>
+<li class="">Plugin architecture for extensions</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="ai-training-pipeline">AI Training Pipeline<a href="#ai-training-pipeline" class="hash-link" aria-label="Direct link to AI Training Pipeline" title="Direct link to AI Training Pipeline" translate="no">​</a></h3>
+<ul>
+<li class="">Synthetic data generation</li>
+<li class="">Domain randomization</li>
+<li class="">Ground truth annotation</li>
+<li class="">Reinforcement learning environments</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="installation-and-setup">Installation and Setup<a href="#installation-and-setup" class="hash-link" aria-label="Direct link to Installation and Setup" title="Direct link to Installation and Setup" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="prerequisites">Prerequisites<a href="#prerequisites" class="hash-link" aria-label="Direct link to Prerequisites" title="Direct link to Prerequisites" translate="no">​</a></h3>
+<ul>
+<li class="">NVIDIA GPU with RTX capabilities</li>
+<li class="">CUDA-compatible driver</li>
+<li class="">Isaac Sim from NVIDIA Developer Zone</li>
+<li class="">ROS 2 Humble Hawksbill</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="basic-launch">Basic Launch<a href="#basic-launch" class="hash-link" aria-label="Direct link to Basic Launch" title="Direct link to Basic Launch" translate="no">​</a></h3>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain"># Launch Isaac Sim with GUI</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">isaac-sim.sh</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"># Launch with ROS 2 bridge</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">ros2 launch isaac_ros_bridges isaac_sim.launch.py</span><br></span></code></pre></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="scene-creation">Scene Creation<a href="#scene-creation" class="hash-link" aria-label="Direct link to Scene Creation" title="Direct link to Scene Creation" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="usd-format">USD Format<a href="#usd-format" class="hash-link" aria-label="Direct link to USD Format" title="Direct link to USD Format" translate="no">​</a></h3>
+<p>Universal Scene Description (USD) defines scenes:</p>
+<ul>
+<li class="">Hierarchical scene graph</li>
+<li class="">Materials and textures</li>
+<li class="">Physics properties</li>
+<li class="">Animation and simulation states</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="omniverse-create">Omniverse Create<a href="#omniverse-create" class="hash-link" aria-label="Direct link to Omniverse Create" title="Direct link to Omniverse Create" translate="no">​</a></h3>
+<ul>
+<li class="">Visual scene editor</li>
+<li class="">Asset import capabilities</li>
+<li class="">Physics setup tools</li>
+<li class="">Lighting and environment design</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="robot-integration">Robot Integration<a href="#robot-integration" class="hash-link" aria-label="Direct link to Robot Integration" title="Direct link to Robot Integration" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="urdf-to-usd-conversion">URDF to USD Conversion<a href="#urdf-to-usd-conversion" class="hash-link" aria-label="Direct link to URDF to USD Conversion" title="Direct link to URDF to USD Conversion" translate="no">​</a></h3>
+<p>Isaac Sim can import URDF files:</p>
+<div class="language-python codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-python codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token keyword" style="color:#00009f">from</span><span class="token plain"> omni</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">isaac</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">core</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">utils</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">nucleus </span><span class="token keyword" style="color:#00009f">import</span><span class="token plain"> get_assets_root_path</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token keyword" style="color:#00009f">from</span><span class="token plain"> omni</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">isaac</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">core</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">utils</span><span class="token punctuation" style="color:#393A34">.</span><span class="token plain">stage </span><span class="token keyword" style="color:#00009f">import</span><span class="token plain"> add_reference_to_stage</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token comment" style="color:#999988;font-style:italic"># Load robot from URDF</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">add_reference_to_stage</span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    usd_path</span><span class="token operator" style="color:#393A34">=</span><span class="token string" style="color:#e3116c">&quot;path/to/robot.usd&quot;</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    prim_path</span><span class="token operator" style="color:#393A34">=</span><span class="token string" style="color:#e3116c">&quot;/World/Robot&quot;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">)</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="articulation-and-joints">Articulation and Joints<a href="#articulation-and-joints" class="hash-link" aria-label="Direct link to Articulation and Joints" title="Direct link to Articulation and Joints" translate="no">​</a></h3>
+<ul>
+<li class="">Joint type mapping (revolute, prismatic, fixed)</li>
+<li class="">Actuator models</li>
+<li class="">Transmission systems</li>
+<li class="">Joint limits and properties</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="sensors-integration">Sensors Integration<a href="#sensors-integration" class="hash-link" aria-label="Direct link to Sensors Integration" title="Direct link to Sensors Integration" translate="no">​</a></h3>
+<ul>
+<li class="">Camera sensors with RTX rendering</li>
+<li class="">LIDAR with ray tracing</li>
+<li class="">IMU and force/torque sensors</li>
+<li class="">Custom sensor types</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="physics-simulation">Physics Simulation<a href="#physics-simulation" class="hash-link" aria-label="Direct link to Physics Simulation" title="Direct link to Physics Simulation" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="physx-engine">PhysX Engine<a href="#physx-engine" class="hash-link" aria-label="Direct link to PhysX Engine" title="Direct link to PhysX Engine" translate="no">​</a></h3>
+<ul>
+<li class="">Accurate rigid body dynamics</li>
+<li class="">Collision detection</li>
+<li class="">Contact modeling</li>
+<li class="">Multi-body systems</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="material-properties">Material Properties<a href="#material-properties" class="hash-link" aria-label="Direct link to Material Properties" title="Direct link to Material Properties" translate="no">​</a></h3>
+<ul>
+<li class="">Surface properties (friction, restitution)</li>
+<li class="">Visual appearance</li>
+<li class="">Physical behavior</li>
+<li class="">Environmental interactions</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="performance-optimization">Performance Optimization<a href="#performance-optimization" class="hash-link" aria-label="Direct link to Performance Optimization" title="Direct link to Performance Optimization" translate="no">​</a></h3>
+<ul>
+<li class="">Simulation step size</li>
+<li class="">Solver parameters</li>
+<li class="">Collision mesh simplification</li>
+<li class="">Level of detail (LOD) systems</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="ai-and-perception-integration">AI and Perception Integration<a href="#ai-and-perception-integration" class="hash-link" aria-label="Direct link to AI and Perception Integration" title="Direct link to AI and Perception Integration" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="synthetic-data-generation">Synthetic Data Generation<a href="#synthetic-data-generation" class="hash-link" aria-label="Direct link to Synthetic Data Generation" title="Direct link to Synthetic Data Generation" translate="no">​</a></h3>
+<ul>
+<li class="">Photorealistic images</li>
+<li class="">Depth maps</li>
+<li class="">Semantic segmentation</li>
+<li class="">Instance segmentation</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="domain-randomization">Domain Randomization<a href="#domain-randomization" class="hash-link" aria-label="Direct link to Domain Randomization" title="Direct link to Domain Randomization" translate="no">​</a></h3>
+<ul>
+<li class="">Material variation</li>
+<li class="">Lighting changes</li>
+<li class="">Object placement</li>
+<li class="">Environmental parameters</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="ground-truth-annotation">Ground Truth Annotation<a href="#ground-truth-annotation" class="hash-link" aria-label="Direct link to Ground Truth Annotation" title="Direct link to Ground Truth Annotation" translate="no">​</a></h3>
+<ul>
+<li class="">3D bounding boxes</li>
+<li class="">Keypoint annotations</li>
+<li class="">Pose estimation</li>
+<li class="">Scene understanding</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="vision-language-action-vla-systems">Vision-Language-Action (VLA) Systems<a href="#vision-language-action-vla-systems" class="hash-link" aria-label="Direct link to Vision-Language-Action (VLA) Systems" title="Direct link to Vision-Language-Action (VLA) Systems" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="photorealistic-rendering">Photorealistic Rendering<a href="#photorealistic-rendering" class="hash-link" aria-label="Direct link to Photorealistic Rendering" title="Direct link to Photorealistic Rendering" translate="no">​</a></h3>
+<ul>
+<li class="">RTX ray tracing</li>
+<li class="">Global illumination</li>
+<li class="">Physically-based materials</li>
+<li class="">Realistic sensor simulation</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="perception-pipeline">Perception Pipeline<a href="#perception-pipeline" class="hash-link" aria-label="Direct link to Perception Pipeline" title="Direct link to Perception Pipeline" translate="no">​</a></h3>
+<ul>
+<li class="">RGB-D camera simulation</li>
+<li class="">Object detection and tracking</li>
+<li class="">Scene understanding</li>
+<li class="">Multi-modal fusion</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="action-generation">Action Generation<a href="#action-generation" class="hash-link" aria-label="Direct link to Action Generation" title="Direct link to Action Generation" translate="no">​</a></h3>
+<ul>
+<li class="">Language understanding</li>
+<li class="">Task planning</li>
+<li class="">Motion execution</li>
+<li class="">Feedback integration</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="ros-2-integration">ROS 2 Integration<a href="#ros-2-integration" class="hash-link" aria-label="Direct link to ROS 2 Integration" title="Direct link to ROS 2 Integration" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="message-types">Message Types<a href="#message-types" class="hash-link" aria-label="Direct link to Message Types" title="Direct link to Message Types" translate="no">​</a></h3>
+<ul>
+<li class="">Standard ROS 2 sensor messages</li>
+<li class="">Joint state publication</li>
+<li class="">TF transforms</li>
+<li class="">Custom message types</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="control-interfaces">Control Interfaces<a href="#control-interfaces" class="hash-link" aria-label="Direct link to Control Interfaces" title="Direct link to Control Interfaces" translate="no">​</a></h3>
+<ul>
+<li class="">Joint trajectory control</li>
+<li class="">Position/velocity/effort control</li>
+<li class="">Planning and execution</li>
+<li class="">State monitoring</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="isaac-ros-extensions">Isaac ROS Extensions<a href="#isaac-ros-extensions" class="hash-link" aria-label="Direct link to Isaac ROS Extensions" title="Direct link to Isaac ROS Extensions" translate="no">​</a></h3>
+<ul>
+<li class="">Isaac ROS packages integration</li>
+<li class="">Perception algorithms</li>
+<li class="">Navigation systems</li>
+<li class="">Manipulation pipelines</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="simulation-workflows">Simulation Workflows<a href="#simulation-workflows" class="hash-link" aria-label="Direct link to Simulation Workflows" title="Direct link to Simulation Workflows" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="training-phase">Training Phase<a href="#training-phase" class="hash-link" aria-label="Direct link to Training Phase" title="Direct link to Training Phase" translate="no">​</a></h3>
+<ol>
+<li class="">Create diverse simulation environments</li>
+<li class="">Generate synthetic datasets</li>
+<li class="">Train perception models</li>
+<li class="">Develop control policies</li>
+<li class="">Validate in simulation</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="transfer-phase">Transfer Phase<a href="#transfer-phase" class="hash-link" aria-label="Direct link to Transfer Phase" title="Direct link to Transfer Phase" translate="no">​</a></h3>
+<ol>
+<li class="">Analyze sim-to-real gap</li>
+<li class="">Adapt models for real hardware</li>
+<li class="">Fine-tune on real data</li>
+<li class="">Validate performance</li>
+<li class="">Deploy to real robot</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="validation-phase">Validation Phase<a href="#validation-phase" class="hash-link" aria-label="Direct link to Validation Phase" title="Direct link to Validation Phase" translate="no">​</a></h3>
+<ol>
+<li class="">Performance benchmarking</li>
+<li class="">Safety validation</li>
+<li class="">Edge case testing</li>
+<li class="">Stress testing</li>
+<li class="">Regression testing</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="best-practices">Best Practices<a href="#best-practices" class="hash-link" aria-label="Direct link to Best Practices" title="Direct link to Best Practices" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="scene-design">Scene Design<a href="#scene-design" class="hash-link" aria-label="Direct link to Scene Design" title="Direct link to Scene Design" translate="no">​</a></h3>
+<ul>
+<li class="">Representative environments</li>
+<li class="">Appropriate lighting</li>
+<li class="">Realistic materials</li>
+<li class="">Proper scale and proportions</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="robot-modeling">Robot Modeling<a href="#robot-modeling" class="hash-link" aria-label="Direct link to Robot Modeling" title="Direct link to Robot Modeling" translate="no">​</a></h3>
+<ul>
+<li class="">Accurate kinematics</li>
+<li class="">Realistic dynamics</li>
+<li class="">Proper sensor placement</li>
+<li class="">Valid joint limits</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="physics-tuning">Physics Tuning<a href="#physics-tuning" class="hash-link" aria-label="Direct link to Physics Tuning" title="Direct link to Physics Tuning" translate="no">​</a></h3>
+<ul>
+<li class="">Realistic parameters</li>
+<li class="">Stable simulation</li>
+<li class="">Appropriate update rates</li>
+<li class="">Performance optimization</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="ai-training">AI Training<a href="#ai-training" class="hash-link" aria-label="Direct link to AI Training" title="Direct link to AI Training" translate="no">​</a></h3>
+<ul>
+<li class="">Diverse scenarios</li>
+<li class="">Domain randomization</li>
+<li class="">Ground truth quality</li>
+<li class="">Validation strategies</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="common-challenges-and-solutions">Common Challenges and Solutions<a href="#common-challenges-and-solutions" class="hash-link" aria-label="Direct link to Common Challenges and Solutions" title="Direct link to Common Challenges and Solutions" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="performance-issues">Performance Issues<a href="#performance-issues" class="hash-link" aria-label="Direct link to Performance Issues" title="Direct link to Performance Issues" translate="no">​</a></h3>
+<ul>
+<li class="">Reduce scene complexity</li>
+<li class="">Optimize rendering settings</li>
+<li class="">Adjust simulation parameters</li>
+<li class="">Use appropriate hardware</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="realism-vs-performance">Realism vs. Performance<a href="#realism-vs-performance" class="hash-link" aria-label="Direct link to Realism vs. Performance" title="Direct link to Realism vs. Performance" translate="no">​</a></h3>
+<ul>
+<li class="">Balance visual quality</li>
+<li class="">Maintain physics accuracy</li>
+<li class="">Optimize for training speed</li>
+<li class="">Validate critical behaviors</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="sim-to-real-transfer">Sim-to-Real Transfer<a href="#sim-to-real-transfer" class="hash-link" aria-label="Direct link to Sim-to-Real Transfer" title="Direct link to Sim-to-Real Transfer" translate="no">​</a></h3>
+<ul>
+<li class="">Minimize domain gap</li>
+<li class="">Use system identification</li>
+<li class="">Apply domain adaptation</li>
+<li class="">Validate on real hardware</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="comparison-with-other-simulators">Comparison with Other Simulators<a href="#comparison-with-other-simulators" class="hash-link" aria-label="Direct link to Comparison with Other Simulators" title="Direct link to Comparison with Other Simulators" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="vs-gazebo">vs. Gazebo<a href="#vs-gazebo" class="hash-link" aria-label="Direct link to vs. Gazebo" title="Direct link to vs. Gazebo" translate="no">​</a></h3>
+<ul>
+<li class="">Isaac Sim: Photorealism, AI integration</li>
+<li class="">Gazebo: Physics accuracy, ROS native</li>
+<li class="">Choose based on use case requirements</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="vs-unity">vs. Unity<a href="#vs-unity" class="hash-link" aria-label="Direct link to vs. Unity" title="Direct link to vs. Unity" translate="no">​</a></h3>
+<ul>
+<li class="">Isaac Sim: Robotics-focused, ROS integration</li>
+<li class="">Unity: Game engine, rich interaction</li>
+<li class="">Both support robotics via plugins</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="safety-and-validation">Safety and Validation<a href="#safety-and-validation" class="hash-link" aria-label="Direct link to Safety and Validation" title="Direct link to Safety and Validation" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="simulation-safety">Simulation Safety<a href="#simulation-safety" class="hash-link" aria-label="Direct link to Simulation Safety" title="Direct link to Simulation Safety" translate="no">​</a></h3>
+<ul>
+<li class="">Collision detection</li>
+<li class="">Joint limit enforcement</li>
+<li class="">Emergency stops</li>
+<li class="">Physical constraints</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="validation-methodology">Validation Methodology<a href="#validation-methodology" class="hash-link" aria-label="Direct link to Validation Methodology" title="Direct link to Validation Methodology" translate="no">​</a></h3>
+<ul>
+<li class="">Compare with real data</li>
+<li class="">Validate physics models</li>
+<li class="">Test edge cases</li>
+<li class="">Measure sim-to-real gap</li>
+</ul>
+<p>Isaac Sim provides a powerful platform for advanced robotics simulation, particularly for AI and perception-focused applications. Its photorealistic rendering and seamless ROS 2 integration make it ideal for Vision-Language-Action system development and synthetic data generation.</p></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col noPrint_WFHX"><a href="https://github.com/hafizsiddiqui1211/physical-ai-humanoid-robotics-textbook/tree/main/docusaurus/docs/simulation/digital-twin-isaac.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/physical-ai-humanoid-robotics-textbook/docs/simulation/digital-twin-gazebo"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Digital Twin: Gazebo Simulation</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/physical-ai-humanoid-robotics-textbook/docs/simulation/digital-twin-unity"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Digital Twin: Unity Simulation</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#introduction-to-isaac-sim" class="table-of-contents__link toc-highlight">Introduction to Isaac Sim</a></li><li><a href="#core-architecture" class="table-of-contents__link toc-highlight">Core Architecture</a><ul><li><a href="#omniverse-foundation" class="table-of-contents__link toc-highlight">Omniverse Foundation</a></li><li><a href="#ros-2-bridge" class="table-of-contents__link toc-highlight">ROS 2 Bridge</a></li><li><a href="#ai-training-pipeline" class="table-of-contents__link toc-highlight">AI Training Pipeline</a></li></ul></li><li><a href="#installation-and-setup" class="table-of-contents__link toc-highlight">Installation and Setup</a><ul><li><a href="#prerequisites" class="table-of-contents__link toc-highlight">Prerequisites</a></li><li><a href="#basic-launch" class="table-of-contents__link toc-highlight">Basic Launch</a></li></ul></li><li><a href="#scene-creation" class="table-of-contents__link toc-highlight">Scene Creation</a><ul><li><a href="#usd-format" class="table-of-contents__link toc-highlight">USD Format</a></li><li><a href="#omniverse-create" class="table-of-contents__link toc-highlight">Omniverse Create</a></li></ul></li><li><a href="#robot-integration" class="table-of-contents__link toc-highlight">Robot Integration</a><ul><li><a href="#urdf-to-usd-conversion" class="table-of-contents__link toc-highlight">URDF to USD Conversion</a></li><li><a href="#articulation-and-joints" class="table-of-contents__link toc-highlight">Articulation and Joints</a></li><li><a href="#sensors-integration" class="table-of-contents__link toc-highlight">Sensors Integration</a></li></ul></li><li><a href="#physics-simulation" class="table-of-contents__link toc-highlight">Physics Simulation</a><ul><li><a href="#physx-engine" class="table-of-contents__link toc-highlight">PhysX Engine</a></li><li><a href="#material-properties" class="table-of-contents__link toc-highlight">Material Properties</a></li><li><a href="#performance-optimization" class="table-of-contents__link toc-highlight">Performance Optimization</a></li></ul></li><li><a href="#ai-and-perception-integration" class="table-of-contents__link toc-highlight">AI and Perception Integration</a><ul><li><a href="#synthetic-data-generation" class="table-of-contents__link toc-highlight">Synthetic Data Generation</a></li><li><a href="#domain-randomization" class="table-of-contents__link toc-highlight">Domain Randomization</a></li><li><a href="#ground-truth-annotation" class="table-of-contents__link toc-highlight">Ground Truth Annotation</a></li></ul></li><li><a href="#vision-language-action-vla-systems" class="table-of-contents__link toc-highlight">Vision-Language-Action (VLA) Systems</a><ul><li><a href="#photorealistic-rendering" class="table-of-contents__link toc-highlight">Photorealistic Rendering</a></li><li><a href="#perception-pipeline" class="table-of-contents__link toc-highlight">Perception Pipeline</a></li><li><a href="#action-generation" class="table-of-contents__link toc-highlight">Action Generation</a></li></ul></li><li><a href="#ros-2-integration" class="table-of-contents__link toc-highlight">ROS 2 Integration</a><ul><li><a href="#message-types" class="table-of-contents__link toc-highlight">Message Types</a></li><li><a href="#control-interfaces" class="table-of-contents__link toc-highlight">Control Interfaces</a></li><li><a href="#isaac-ros-extensions" class="table-of-contents__link toc-highlight">Isaac ROS Extensions</a></li></ul></li><li><a href="#simulation-workflows" class="table-of-contents__link toc-highlight">Simulation Workflows</a><ul><li><a href="#training-phase" class="table-of-contents__link toc-highlight">Training Phase</a></li><li><a href="#transfer-phase" class="table-of-contents__link toc-highlight">Transfer Phase</a></li><li><a href="#validation-phase" class="table-of-contents__link toc-highlight">Validation Phase</a></li></ul></li><li><a href="#best-practices" class="table-of-contents__link toc-highlight">Best Practices</a><ul><li><a href="#scene-design" class="table-of-contents__link toc-highlight">Scene Design</a></li><li><a href="#robot-modeling" class="table-of-contents__link toc-highlight">Robot Modeling</a></li><li><a href="#physics-tuning" class="table-of-contents__link toc-highlight">Physics Tuning</a></li><li><a href="#ai-training" class="table-of-contents__link toc-highlight">AI Training</a></li></ul></li><li><a href="#common-challenges-and-solutions" class="table-of-contents__link toc-highlight">Common Challenges and Solutions</a><ul><li><a href="#performance-issues" class="table-of-contents__link toc-highlight">Performance Issues</a></li><li><a href="#realism-vs-performance" class="table-of-contents__link toc-highlight">Realism vs. Performance</a></li><li><a href="#sim-to-real-transfer" class="table-of-contents__link toc-highlight">Sim-to-Real Transfer</a></li></ul></li><li><a href="#comparison-with-other-simulators" class="table-of-contents__link toc-highlight">Comparison with Other Simulators</a><ul><li><a href="#vs-gazebo" class="table-of-contents__link toc-highlight">vs. Gazebo</a></li><li><a href="#vs-unity" class="table-of-contents__link toc-highlight">vs. Unity</a></li></ul></li><li><a href="#safety-and-validation" class="table-of-contents__link toc-highlight">Safety and Validation</a><ul><li><a href="#simulation-safety" class="table-of-contents__link toc-highlight">Simulation Safety</a></li><li><a href="#validation-methodology" class="table-of-contents__link toc-highlight">Validation Methodology</a></li></ul></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Content</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/physical-ai-humanoid-robotics-textbook/docs/intro">Textbook</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://stackoverflow.com/questions/tagged/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">Stack Overflow<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://discordapp.com/invite/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">Discord<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://github.com/facebook/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2025 Physical AI & Humanoid Robotics Textbook. Built with Docusaurus.</div></div></div></footer></div>
+</body>
+</html>

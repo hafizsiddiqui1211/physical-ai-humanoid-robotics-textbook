@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-simulation/digital-twin-unity" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">Digital Twin: Unity Simulation | Physical AI &amp; Humanoid Robotics Textbook</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://hafizsiddiqui1211.github.io/physical-ai-humanoid-robotics-textbook/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://hafizsiddiqui1211.github.io/physical-ai-humanoid-robotics-textbook/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://hafizsiddiqui1211.github.io/physical-ai-humanoid-robotics-textbook/docs/simulation/digital-twin-unity"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Digital Twin: Unity Simulation | Physical AI &amp; Humanoid Robotics Textbook"><meta data-rh="true" name="description" content="Introduction to Unity for Robotics"><meta data-rh="true" property="og:description" content="Introduction to Unity for Robotics"><link data-rh="true" rel="icon" href="/physical-ai-humanoid-robotics-textbook/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://hafizsiddiqui1211.github.io/physical-ai-humanoid-robotics-textbook/docs/simulation/digital-twin-unity"><link data-rh="true" rel="alternate" href="https://hafizsiddiqui1211.github.io/physical-ai-humanoid-robotics-textbook/docs/simulation/digital-twin-unity" hreflang="en"><link data-rh="true" rel="alternate" href="https://hafizsiddiqui1211.github.io/physical-ai-humanoid-robotics-textbook/docs/simulation/digital-twin-unity" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Digital Twin: Unity Simulation","item":"https://hafizsiddiqui1211.github.io/physical-ai-humanoid-robotics-textbook/docs/simulation/digital-twin-unity"}]}</script><link rel="stylesheet" href="/physical-ai-humanoid-robotics-textbook/assets/css/styles.f8adb39b.css">
+<script src="/physical-ai-humanoid-robotics-textbook/assets/js/runtime~main.31028975.js" defer="defer"></script>
+<script src="/physical-ai-humanoid-robotics-textbook/assets/js/main.79d754bc.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" target="_self" href="/physical-ai-humanoid-robotics-textbook/"><div class="navbar__logo"><img src="/physical-ai-humanoid-robotics-textbook/img/logo.svg" alt="Robotics Textbook Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/physical-ai-humanoid-robotics-textbook/img/logo.svg" alt="Robotics Textbook Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">Physical AI &amp; Humanoid Robotics</b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/physical-ai-humanoid-robotics-textbook/docs/intro">Textbook</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href="https://github.com/hafizsiddiqui1211/physical-ai-humanoid-robotics-textbook" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/physical-ai-humanoid-robotics-textbook/docs/intro"><span title="Introduction to Physical AI &amp; Humanoid Robotics" class="linkLabel_WmDU">Introduction to Physical AI &amp; Humanoid Robotics</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/physical-ai-humanoid-robotics-textbook/docs/syllabus"><span title="Syllabus: Physical AI &amp; Humanoid Robotics" class="linkLabel_WmDU">Syllabus: Physical AI &amp; Humanoid Robotics</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/physical-ai-humanoid-robotics-textbook/docs/course-outline"><span title="Course Outline: Physical AI &amp; Humanoid Robotics" class="linkLabel_WmDU">Course Outline: Physical AI &amp; Humanoid Robotics</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/physical-ai-humanoid-robotics-textbook/docs/learning-outcomes"><span title="Learning Outcomes: Physical AI &amp; Humanoid Robotics" class="linkLabel_WmDU">Learning Outcomes: Physical AI &amp; Humanoid Robotics</span></a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/physical-ai-humanoid-robotics-textbook/docs/foundations/physical-ai"><span title="Foundations" class="categoryLinkLabel_W154">Foundations</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/physical-ai-humanoid-robotics-textbook/docs/systems/ros2-nervous-system"><span title="Systems" class="categoryLinkLabel_W154">Systems</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" href="/physical-ai-humanoid-robotics-textbook/docs/simulation/digital-twin-gazebo"><span title="Simulation" class="categoryLinkLabel_W154">Simulation</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/physical-ai-humanoid-robotics-textbook/docs/simulation/digital-twin-gazebo"><span title="Digital Twin: Gazebo Simulation" class="linkLabel_WmDU">Digital Twin: Gazebo Simulation</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/physical-ai-humanoid-robotics-textbook/docs/simulation/digital-twin-isaac"><span title="Digital Twin: Isaac Sim" class="linkLabel_WmDU">Digital Twin: Isaac Sim</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/physical-ai-humanoid-robotics-textbook/docs/simulation/digital-twin-unity"><span title="Digital Twin: Unity Simulation" class="linkLabel_WmDU">Digital Twin: Unity Simulation</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/physical-ai-humanoid-robotics-textbook/docs/ai/isaac-ros-pipelines"><span title="AI &amp; Perception" class="categoryLinkLabel_W154">AI &amp; Perception</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/physical-ai-humanoid-robotics-textbook/docs/humanoid/kinematics-dynamics"><span title="Humanoid Robotics" class="categoryLinkLabel_W154">Humanoid Robotics</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/physical-ai-humanoid-robotics-textbook/docs/vla/vision-language-action"><span title="Vision-Language-Action" class="categoryLinkLabel_W154">Vision-Language-Action</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/physical-ai-humanoid-robotics-textbook/docs/capstone/capstone-project"><span title="Capstone Project" class="categoryLinkLabel_W154">Capstone Project</span></a></div></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/physical-ai-humanoid-robotics-textbook/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">Simulation</span></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">Digital Twin: Unity Simulation</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Digital Twin: Unity Simulation</h1></header>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="introduction-to-unity-for-robotics">Introduction to Unity for Robotics<a href="#introduction-to-unity-for-robotics" class="hash-link" aria-label="Direct link to Introduction to Unity for Robotics" title="Direct link to Introduction to Unity for Robotics" translate="no">​</a></h2>
+<p>Unity is a powerful real-time 3D development platform that has been adapted for robotics simulation through the Unity Robotics Hub. It offers rich visualization capabilities, interactive environments, and flexible simulation tools. Unity&#x27;s strength lies in creating engaging, interactive digital twins with high-fidelity graphics and intuitive user interfaces.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="unity-robotics-ecosystem">Unity Robotics Ecosystem<a href="#unity-robotics-ecosystem" class="hash-link" aria-label="Direct link to Unity Robotics Ecosystem" title="Direct link to Unity Robotics Ecosystem" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="unity-robotics-hub">Unity Robotics Hub<a href="#unity-robotics-hub" class="hash-link" aria-label="Direct link to Unity Robotics Hub" title="Direct link to Unity Robotics Hub" translate="no">​</a></h3>
+<ul>
+<li class="">Unity package manager integration</li>
+<li class="">Robotics-specific packages</li>
+<li class="">ROS# communication bridge</li>
+<li class="">Sample scenes and tutorials</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="ros-communication">ROS# Communication<a href="#ros-communication" class="hash-link" aria-label="Direct link to ROS# Communication" title="Direct link to ROS# Communication" translate="no">​</a></h3>
+<ul>
+<li class="">Real-time ROS communication</li>
+<li class="">Standard message types</li>
+<li class="">Bidirectional data flow</li>
+<li class="">Multi-platform support</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="perception-package">Perception Package<a href="#perception-package" class="hash-link" aria-label="Direct link to Perception Package" title="Direct link to Perception Package" translate="no">​</a></h3>
+<ul>
+<li class="">Synthetic sensor data</li>
+<li class="">Ground truth annotation</li>
+<li class="">Domain randomization</li>
+<li class="">Data generation tools</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="setting-up-unity-for-robotics">Setting Up Unity for Robotics<a href="#setting-up-unity-for-robotics" class="hash-link" aria-label="Direct link to Setting Up Unity for Robotics" title="Direct link to Setting Up Unity for Robotics" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="installation-requirements">Installation Requirements<a href="#installation-requirements" class="hash-link" aria-label="Direct link to Installation Requirements" title="Direct link to Installation Requirements" translate="no">​</a></h3>
+<ul>
+<li class="">Unity Hub and Unity Editor (2021.3 LTS or later)</li>
+<li class="">Unity Robotics packages</li>
+<li class="">ROS 2 installation</li>
+<li class="">Visual Studio or compatible IDE</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="project-setup">Project Setup<a href="#project-setup" class="hash-link" aria-label="Direct link to Project Setup" title="Direct link to Project Setup" translate="no">​</a></h3>
+<ol>
+<li class="">Create new Unity project</li>
+<li class="">Import Unity Robotics packages</li>
+<li class="">Configure ROS communication</li>
+<li class="">Set up robot models and environments</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="basic-scene-structure">Basic Scene Structure<a href="#basic-scene-structure" class="hash-link" aria-label="Direct link to Basic Scene Structure" title="Direct link to Basic Scene Structure" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Robot GameObject</strong>: The robot model with components</li>
+<li class=""><strong>Environment</strong>: Scene with obstacles and targets</li>
+<li class=""><strong>Sensors</strong>: Camera, LIDAR, IMU components</li>
+<li class=""><strong>Controllers</strong>: ROS communication scripts</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="robot-integration">Robot Integration<a href="#robot-integration" class="hash-link" aria-label="Direct link to Robot Integration" title="Direct link to Robot Integration" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="importing-robot-models">Importing Robot Models<a href="#importing-robot-models" class="hash-link" aria-label="Direct link to Importing Robot Models" title="Direct link to Importing Robot Models" translate="no">​</a></h3>
+<p>Unity supports various 3D model formats:</p>
+<ul>
+<li class="">FBX, OBJ, glTF for geometry</li>
+<li class="">URDF import via plugins</li>
+<li class="">Custom robot assemblies</li>
+<li class="">Animation and joint systems</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="joint-control-systems">Joint Control Systems<a href="#joint-control-systems" class="hash-link" aria-label="Direct link to Joint Control Systems" title="Direct link to Joint Control Systems" translate="no">​</a></h3>
+<div class="language-csharp codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-csharp codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">using UnityEngine;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">using Unity.Robotics.ROSTCPConnector;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">using RosMessageTypes.Sensor;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">public class JointController : MonoBehaviour</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">{</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    public string jointName;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    public float jointPosition;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    private ROSConnection ros;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    void Start()</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    {</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        ros = ROSConnection.instance;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    }</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    void Update()</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    {</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        // Publish joint state</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        var jointState = new JointStateMsg();</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        jointState.name = new string[] { jointName };</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        jointState.position = new double[] { jointPosition };</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        ros.Send&lt;JointStateMsg&gt;(&quot;joint_states&quot;, jointState);</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    }</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">}</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="sensor-integration">Sensor Integration<a href="#sensor-integration" class="hash-link" aria-label="Direct link to Sensor Integration" title="Direct link to Sensor Integration" translate="no">​</a></h3>
+<p>Unity provides various sensor simulation:</p>
+<ul>
+<li class=""><strong>Camera sensors</strong>: RGB, depth, semantic segmentation</li>
+<li class=""><strong>LIDAR simulation</strong>: Raycasting-based distance measurement</li>
+<li class=""><strong>IMU simulation</strong>: Acceleration and angular velocity</li>
+<li class=""><strong>Force sensors</strong>: Contact and interaction forces</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="environment-creation">Environment Creation<a href="#environment-creation" class="hash-link" aria-label="Direct link to Environment Creation" title="Direct link to Environment Creation" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="terrain-and-static-objects">Terrain and Static Objects<a href="#terrain-and-static-objects" class="hash-link" aria-label="Direct link to Terrain and Static Objects" title="Direct link to Terrain and Static Objects" translate="no">​</a></h3>
+<ul>
+<li class="">ProBuilder for quick prototyping</li>
+<li class="">Imported CAD models for accuracy</li>
+<li class="">Physics materials for realistic interaction</li>
+<li class="">Occlusion culling for performance</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="dynamic-elements">Dynamic Elements<a href="#dynamic-elements" class="hash-link" aria-label="Direct link to Dynamic Elements" title="Direct link to Dynamic Elements" translate="no">​</a></h3>
+<ul>
+<li class="">Moving obstacles</li>
+<li class="">Interactive objects</li>
+<li class="">Weather and lighting changes</li>
+<li class="">Time-of-day variations</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="multi-robot-environments">Multi-Robot Environments<a href="#multi-robot-environments" class="hash-link" aria-label="Direct link to Multi-Robot Environments" title="Direct link to Multi-Robot Environments" translate="no">​</a></h3>
+<ul>
+<li class="">Networked simulation</li>
+<li class="">Multi-agent scenarios</li>
+<li class="">Communication protocols</li>
+<li class="">Coordination behaviors</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="ros-communication-1">ROS Communication<a href="#ros-communication-1" class="hash-link" aria-label="Direct link to ROS Communication" title="Direct link to ROS Communication" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="publisher-subscriber-pattern">Publisher-Subscriber Pattern<a href="#publisher-subscriber-pattern" class="hash-link" aria-label="Direct link to Publisher-Subscriber Pattern" title="Direct link to Publisher-Subscriber Pattern" translate="no">​</a></h3>
+<p>Unity integrates with ROS topics:</p>
+<div class="language-csharp codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-csharp codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">// Publishing sensor data</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">var imageMsg = new ImageMsg();</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">// ... populate image data</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">ros.Publish(&quot;camera/image_raw&quot;, imageMsg);</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">// Subscribing to commands</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">ros.Subscribe&lt;TwistMsg&gt;(&quot;cmd_vel&quot;, OnVelocityCommand);</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="service-calls">Service Calls<a href="#service-calls" class="hash-link" aria-label="Direct link to Service Calls" title="Direct link to Service Calls" translate="no">​</a></h3>
+<ul>
+<li class="">Request-response communication</li>
+<li class="">Configuration services</li>
+<li class="">Calibration procedures</li>
+<li class="">Diagnostic queries</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="action-servers">Action Servers<a href="#action-servers" class="hash-link" aria-label="Direct link to Action Servers" title="Direct link to Action Servers" translate="no">​</a></h3>
+<ul>
+<li class="">Long-running operations</li>
+<li class="">Feedback during execution</li>
+<li class="">Goal management</li>
+<li class="">Preemption handling</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="perception-and-ai-integration">Perception and AI Integration<a href="#perception-and-ai-integration" class="hash-link" aria-label="Direct link to Perception and AI Integration" title="Direct link to Perception and AI Integration" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="synthetic-data-generation">Synthetic Data Generation<a href="#synthetic-data-generation" class="hash-link" aria-label="Direct link to Synthetic Data Generation" title="Direct link to Synthetic Data Generation" translate="no">​</a></h3>
+<p>Unity excels at generating training data:</p>
+<ul>
+<li class="">Photorealistic images</li>
+<li class="">Depth maps and point clouds</li>
+<li class="">Semantic segmentation masks</li>
+<li class="">Instance segmentation masks</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="domain-randomization">Domain Randomization<a href="#domain-randomization" class="hash-link" aria-label="Direct link to Domain Randomization" title="Direct link to Domain Randomization" translate="no">​</a></h3>
+<ul>
+<li class="">Material variation</li>
+<li class="">Lighting conditions</li>
+<li class="">Camera parameters</li>
+<li class="">Environmental factors</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="ground-truth-annotation">Ground Truth Annotation<a href="#ground-truth-annotation" class="hash-link" aria-label="Direct link to Ground Truth Annotation" title="Direct link to Ground Truth Annotation" translate="no">​</a></h3>
+<ul>
+<li class="">3D bounding boxes</li>
+<li class="">Pose estimation</li>
+<li class="">Keypoint annotation</li>
+<li class="">Scene understanding labels</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="performance-optimization">Performance Optimization<a href="#performance-optimization" class="hash-link" aria-label="Direct link to Performance Optimization" title="Direct link to Performance Optimization" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="rendering-optimization">Rendering Optimization<a href="#rendering-optimization" class="hash-link" aria-label="Direct link to Rendering Optimization" title="Direct link to Rendering Optimization" translate="no">​</a></h3>
+<ul>
+<li class="">Level of detail (LOD) systems</li>
+<li class="">Occlusion culling</li>
+<li class="">Dynamic batching</li>
+<li class="">Shader optimization</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="physics-optimization">Physics Optimization<a href="#physics-optimization" class="hash-link" aria-label="Direct link to Physics Optimization" title="Direct link to Physics Optimization" translate="no">​</a></h3>
+<ul>
+<li class="">Collision mesh simplification</li>
+<li class="">Fixed timestep physics</li>
+<li class="">Joint limit constraints</li>
+<li class="">Contact filtering</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="network-optimization">Network Optimization<a href="#network-optimization" class="hash-link" aria-label="Direct link to Network Optimization" title="Direct link to Network Optimization" translate="no">​</a></h3>
+<ul>
+<li class="">Message compression</li>
+<li class="">Update rate management</li>
+<li class="">Connection reliability</li>
+<li class="">Bandwidth management</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="best-practices">Best Practices<a href="#best-practices" class="hash-link" aria-label="Direct link to Best Practices" title="Direct link to Best Practices" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="scene-design">Scene Design<a href="#scene-design" class="hash-link" aria-label="Direct link to Scene Design" title="Direct link to Scene Design" translate="no">​</a></h3>
+<ul>
+<li class="">Modular scene architecture</li>
+<li class="">Reusable environment components</li>
+<li class="">Scalable simulation design</li>
+<li class="">Performance monitoring</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="robot-modeling">Robot Modeling<a href="#robot-modeling" class="hash-link" aria-label="Direct link to Robot Modeling" title="Direct link to Robot Modeling" translate="no">​</a></h3>
+<ul>
+<li class="">Proper pivot points</li>
+<li class="">Accurate collision meshes</li>
+<li class="">Realistic joint limits</li>
+<li class="">Appropriate mass properties</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="communication-design">Communication Design<a href="#communication-design" class="hash-link" aria-label="Direct link to Communication Design" title="Direct link to Communication Design" translate="no">​</a></h3>
+<ul>
+<li class="">Efficient message schemas</li>
+<li class="">Appropriate update rates</li>
+<li class="">Error handling</li>
+<li class="">Connection management</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="testing-and-validation">Testing and Validation<a href="#testing-and-validation" class="hash-link" aria-label="Direct link to Testing and Validation" title="Direct link to Testing and Validation" translate="no">​</a></h3>
+<ul>
+<li class="">Unit testing for scripts</li>
+<li class="">Integration testing with ROS</li>
+<li class="">Performance benchmarking</li>
+<li class="">Behavior validation</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="common-use-cases">Common Use Cases<a href="#common-use-cases" class="hash-link" aria-label="Direct link to Common Use Cases" title="Direct link to Common Use Cases" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="training-environments">Training Environments<a href="#training-environments" class="hash-link" aria-label="Direct link to Training Environments" title="Direct link to Training Environments" translate="no">​</a></h3>
+<ul>
+<li class="">Reinforcement learning scenarios</li>
+<li class="">Imitation learning environments</li>
+<li class="">Multi-agent training</li>
+<li class="">Curriculum learning</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="visualization-and-debugging">Visualization and Debugging<a href="#visualization-and-debugging" class="hash-link" aria-label="Direct link to Visualization and Debugging" title="Direct link to Visualization and Debugging" translate="no">​</a></h3>
+<ul>
+<li class="">Real-time robot state visualization</li>
+<li class="">Sensor data overlay</li>
+<li class="">Path planning visualization</li>
+<li class="">Algorithm debugging</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="human-robot-interaction">Human-Robot Interaction<a href="#human-robot-interaction" class="hash-link" aria-label="Direct link to Human-Robot Interaction" title="Direct link to Human-Robot Interaction" translate="no">​</a></h3>
+<ul>
+<li class="">Intuitive interfaces</li>
+<li class="">Safety visualization</li>
+<li class="">Training scenarios</li>
+<li class="">User studies</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="comparison-with-other-simulators">Comparison with Other Simulators<a href="#comparison-with-other-simulators" class="hash-link" aria-label="Direct link to Comparison with Other Simulators" title="Direct link to Comparison with Other Simulators" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="vs-gazebo">vs. Gazebo<a href="#vs-gazebo" class="hash-link" aria-label="Direct link to vs. Gazebo" title="Direct link to vs. Gazebo" translate="no">​</a></h3>
+<ul>
+<li class="">Unity: Rich visualization, interaction</li>
+<li class="">Gazebo: Physics accuracy, ROS native</li>
+<li class="">Choose based on visualization needs</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="vs-isaac-sim">vs. Isaac Sim<a href="#vs-isaac-sim" class="hash-link" aria-label="Direct link to vs. Isaac Sim" title="Direct link to vs. Isaac Sim" translate="no">​</a></h3>
+<ul>
+<li class="">Unity: Game engine, flexible development</li>
+<li class="">Isaac Sim: Robotics-focused, photorealistic</li>
+<li class="">Both support robotics workflows</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="integration-with-isaac-sim-and-gazebo">Integration with Isaac Sim and Gazebo<a href="#integration-with-isaac-sim-and-gazebo" class="hash-link" aria-label="Direct link to Integration with Isaac Sim and Gazebo" title="Direct link to Integration with Isaac Sim and Gazebo" translate="no">​</a></h2>
+<p>Unity can be part of a multi-simulator approach:</p>
+<ul>
+<li class="">Unity: Rich visualization and interaction</li>
+<li class="">Isaac Sim: Photorealistic AI training</li>
+<li class="">Gazebo: Physics accuracy and ROS integration</li>
+</ul>
+<p>Choose the right simulator for each task in the development pipeline.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="troubleshooting">Troubleshooting<a href="#troubleshooting" class="hash-link" aria-label="Direct link to Troubleshooting" title="Direct link to Troubleshooting" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="performance-issues">Performance Issues<a href="#performance-issues" class="hash-link" aria-label="Direct link to Performance Issues" title="Direct link to Performance Issues" translate="no">​</a></h3>
+<ul>
+<li class="">Reduce scene complexity</li>
+<li class="">Optimize rendering settings</li>
+<li class="">Adjust physics parameters</li>
+<li class="">Use appropriate hardware</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="communication-problems">Communication Problems<a href="#communication-problems" class="hash-link" aria-label="Direct link to Communication Problems" title="Direct link to Communication Problems" translate="no">​</a></h3>
+<ul>
+<li class="">Check ROS network setup</li>
+<li class="">Verify message types</li>
+<li class="">Monitor connection status</li>
+<li class="">Test with simple examples</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="physics-instabilities">Physics Instabilities<a href="#physics-instabilities" class="hash-link" aria-label="Direct link to Physics Instabilities" title="Direct link to Physics Instabilities" translate="no">​</a></h3>
+<ul>
+<li class="">Verify mass properties</li>
+<li class="">Adjust solver parameters</li>
+<li class="">Check joint configurations</li>
+<li class="">Validate collision meshes</li>
+</ul>
+<p>Unity provides a flexible and visually rich platform for robotics simulation and digital twin applications. Its strength in visualization and interaction makes it valuable for human-robot interaction studies, training environments, and complex scenario simulation.</p>
+<p>The Unity Robotics Hub bridges the gap between game engine capabilities and robotics requirements, enabling sophisticated simulation and visualization workflows for robotic systems development.</p></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col noPrint_WFHX"><a href="https://github.com/hafizsiddiqui1211/physical-ai-humanoid-robotics-textbook/tree/main/docusaurus/docs/simulation/digital-twin-unity.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/physical-ai-humanoid-robotics-textbook/docs/simulation/digital-twin-isaac"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Digital Twin: Isaac Sim</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/physical-ai-humanoid-robotics-textbook/docs/ai/isaac-ros-pipelines"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Isaac ROS Pipelines</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#introduction-to-unity-for-robotics" class="table-of-contents__link toc-highlight">Introduction to Unity for Robotics</a></li><li><a href="#unity-robotics-ecosystem" class="table-of-contents__link toc-highlight">Unity Robotics Ecosystem</a><ul><li><a href="#unity-robotics-hub" class="table-of-contents__link toc-highlight">Unity Robotics Hub</a></li><li><a href="#ros-communication" class="table-of-contents__link toc-highlight">ROS# Communication</a></li><li><a href="#perception-package" class="table-of-contents__link toc-highlight">Perception Package</a></li></ul></li><li><a href="#setting-up-unity-for-robotics" class="table-of-contents__link toc-highlight">Setting Up Unity for Robotics</a><ul><li><a href="#installation-requirements" class="table-of-contents__link toc-highlight">Installation Requirements</a></li><li><a href="#project-setup" class="table-of-contents__link toc-highlight">Project Setup</a></li><li><a href="#basic-scene-structure" class="table-of-contents__link toc-highlight">Basic Scene Structure</a></li></ul></li><li><a href="#robot-integration" class="table-of-contents__link toc-highlight">Robot Integration</a><ul><li><a href="#importing-robot-models" class="table-of-contents__link toc-highlight">Importing Robot Models</a></li><li><a href="#joint-control-systems" class="table-of-contents__link toc-highlight">Joint Control Systems</a></li><li><a href="#sensor-integration" class="table-of-contents__link toc-highlight">Sensor Integration</a></li></ul></li><li><a href="#environment-creation" class="table-of-contents__link toc-highlight">Environment Creation</a><ul><li><a href="#terrain-and-static-objects" class="table-of-contents__link toc-highlight">Terrain and Static Objects</a></li><li><a href="#dynamic-elements" class="table-of-contents__link toc-highlight">Dynamic Elements</a></li><li><a href="#multi-robot-environments" class="table-of-contents__link toc-highlight">Multi-Robot Environments</a></li></ul></li><li><a href="#ros-communication-1" class="table-of-contents__link toc-highlight">ROS Communication</a><ul><li><a href="#publisher-subscriber-pattern" class="table-of-contents__link toc-highlight">Publisher-Subscriber Pattern</a></li><li><a href="#service-calls" class="table-of-contents__link toc-highlight">Service Calls</a></li><li><a href="#action-servers" class="table-of-contents__link toc-highlight">Action Servers</a></li></ul></li><li><a href="#perception-and-ai-integration" class="table-of-contents__link toc-highlight">Perception and AI Integration</a><ul><li><a href="#synthetic-data-generation" class="table-of-contents__link toc-highlight">Synthetic Data Generation</a></li><li><a href="#domain-randomization" class="table-of-contents__link toc-highlight">Domain Randomization</a></li><li><a href="#ground-truth-annotation" class="table-of-contents__link toc-highlight">Ground Truth Annotation</a></li></ul></li><li><a href="#performance-optimization" class="table-of-contents__link toc-highlight">Performance Optimization</a><ul><li><a href="#rendering-optimization" class="table-of-contents__link toc-highlight">Rendering Optimization</a></li><li><a href="#physics-optimization" class="table-of-contents__link toc-highlight">Physics Optimization</a></li><li><a href="#network-optimization" class="table-of-contents__link toc-highlight">Network Optimization</a></li></ul></li><li><a href="#best-practices" class="table-of-contents__link toc-highlight">Best Practices</a><ul><li><a href="#scene-design" class="table-of-contents__link toc-highlight">Scene Design</a></li><li><a href="#robot-modeling" class="table-of-contents__link toc-highlight">Robot Modeling</a></li><li><a href="#communication-design" class="table-of-contents__link toc-highlight">Communication Design</a></li><li><a href="#testing-and-validation" class="table-of-contents__link toc-highlight">Testing and Validation</a></li></ul></li><li><a href="#common-use-cases" class="table-of-contents__link toc-highlight">Common Use Cases</a><ul><li><a href="#training-environments" class="table-of-contents__link toc-highlight">Training Environments</a></li><li><a href="#visualization-and-debugging" class="table-of-contents__link toc-highlight">Visualization and Debugging</a></li><li><a href="#human-robot-interaction" class="table-of-contents__link toc-highlight">Human-Robot Interaction</a></li></ul></li><li><a href="#comparison-with-other-simulators" class="table-of-contents__link toc-highlight">Comparison with Other Simulators</a><ul><li><a href="#vs-gazebo" class="table-of-contents__link toc-highlight">vs. Gazebo</a></li><li><a href="#vs-isaac-sim" class="table-of-contents__link toc-highlight">vs. Isaac Sim</a></li></ul></li><li><a href="#integration-with-isaac-sim-and-gazebo" class="table-of-contents__link toc-highlight">Integration with Isaac Sim and Gazebo</a></li><li><a href="#troubleshooting" class="table-of-contents__link toc-highlight">Troubleshooting</a><ul><li><a href="#performance-issues" class="table-of-contents__link toc-highlight">Performance Issues</a></li><li><a href="#communication-problems" class="table-of-contents__link toc-highlight">Communication Problems</a></li><li><a href="#physics-instabilities" class="table-of-contents__link toc-highlight">Physics Instabilities</a></li></ul></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Content</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/physical-ai-humanoid-robotics-textbook/docs/intro">Textbook</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://stackoverflow.com/questions/tagged/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">Stack Overflow<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://discordapp.com/invite/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">Discord<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://github.com/facebook/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2025 Physical AI & Humanoid Robotics Textbook. Built with Docusaurus.</div></div></div></footer></div>
+</body>
+</html>

@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-systems/actuator-control" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">Actuator Control | Physical AI &amp; Humanoid Robotics Textbook</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://hafizsiddiqui1211.github.io/physical-ai-humanoid-robotics-textbook/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://hafizsiddiqui1211.github.io/physical-ai-humanoid-robotics-textbook/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://hafizsiddiqui1211.github.io/physical-ai-humanoid-robotics-textbook/docs/systems/actuator-control"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Actuator Control | Physical AI &amp; Humanoid Robotics Textbook"><meta data-rh="true" name="description" content="Introduction to Actuators"><meta data-rh="true" property="og:description" content="Introduction to Actuators"><link data-rh="true" rel="icon" href="/physical-ai-humanoid-robotics-textbook/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://hafizsiddiqui1211.github.io/physical-ai-humanoid-robotics-textbook/docs/systems/actuator-control"><link data-rh="true" rel="alternate" href="https://hafizsiddiqui1211.github.io/physical-ai-humanoid-robotics-textbook/docs/systems/actuator-control" hreflang="en"><link data-rh="true" rel="alternate" href="https://hafizsiddiqui1211.github.io/physical-ai-humanoid-robotics-textbook/docs/systems/actuator-control" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Actuator Control","item":"https://hafizsiddiqui1211.github.io/physical-ai-humanoid-robotics-textbook/docs/systems/actuator-control"}]}</script><link rel="stylesheet" href="/physical-ai-humanoid-robotics-textbook/assets/css/styles.f8adb39b.css">
+<script src="/physical-ai-humanoid-robotics-textbook/assets/js/runtime~main.31028975.js" defer="defer"></script>
+<script src="/physical-ai-humanoid-robotics-textbook/assets/js/main.79d754bc.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" target="_self" href="/physical-ai-humanoid-robotics-textbook/"><div class="navbar__logo"><img src="/physical-ai-humanoid-robotics-textbook/img/logo.svg" alt="Robotics Textbook Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/physical-ai-humanoid-robotics-textbook/img/logo.svg" alt="Robotics Textbook Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">Physical AI &amp; Humanoid Robotics</b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/physical-ai-humanoid-robotics-textbook/docs/intro">Textbook</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href="https://github.com/hafizsiddiqui1211/physical-ai-humanoid-robotics-textbook" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/physical-ai-humanoid-robotics-textbook/docs/intro"><span title="Introduction to Physical AI &amp; Humanoid Robotics" class="linkLabel_WmDU">Introduction to Physical AI &amp; Humanoid Robotics</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/physical-ai-humanoid-robotics-textbook/docs/syllabus"><span title="Syllabus: Physical AI &amp; Humanoid Robotics" class="linkLabel_WmDU">Syllabus: Physical AI &amp; Humanoid Robotics</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/physical-ai-humanoid-robotics-textbook/docs/course-outline"><span title="Course Outline: Physical AI &amp; Humanoid Robotics" class="linkLabel_WmDU">Course Outline: Physical AI &amp; Humanoid Robotics</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/physical-ai-humanoid-robotics-textbook/docs/learning-outcomes"><span title="Learning Outcomes: Physical AI &amp; Humanoid Robotics" class="linkLabel_WmDU">Learning Outcomes: Physical AI &amp; Humanoid Robotics</span></a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/physical-ai-humanoid-robotics-textbook/docs/foundations/physical-ai"><span title="Foundations" class="categoryLinkLabel_W154">Foundations</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" href="/physical-ai-humanoid-robotics-textbook/docs/systems/ros2-nervous-system"><span title="Systems" class="categoryLinkLabel_W154">Systems</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/physical-ai-humanoid-robotics-textbook/docs/systems/ros2-nervous-system"><span title="ROS 2: The Robotic Nervous System" class="linkLabel_WmDU">ROS 2: The Robotic Nervous System</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/physical-ai-humanoid-robotics-textbook/docs/systems/sensor-integration"><span title="Sensor Integration" class="linkLabel_WmDU">Sensor Integration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/physical-ai-humanoid-robotics-textbook/docs/systems/actuator-control"><span title="Actuator Control" class="linkLabel_WmDU">Actuator Control</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/physical-ai-humanoid-robotics-textbook/docs/simulation/digital-twin-gazebo"><span title="Simulation" class="categoryLinkLabel_W154">Simulation</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/physical-ai-humanoid-robotics-textbook/docs/ai/isaac-ros-pipelines"><span title="AI &amp; Perception" class="categoryLinkLabel_W154">AI &amp; Perception</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/physical-ai-humanoid-robotics-textbook/docs/humanoid/kinematics-dynamics"><span title="Humanoid Robotics" class="categoryLinkLabel_W154">Humanoid Robotics</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/physical-ai-humanoid-robotics-textbook/docs/vla/vision-language-action"><span title="Vision-Language-Action" class="categoryLinkLabel_W154">Vision-Language-Action</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/physical-ai-humanoid-robotics-textbook/docs/capstone/capstone-project"><span title="Capstone Project" class="categoryLinkLabel_W154">Capstone Project</span></a></div></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/physical-ai-humanoid-robotics-textbook/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">Systems</span></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">Actuator Control</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Actuator Control</h1></header>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="introduction-to-actuators">Introduction to Actuators<a href="#introduction-to-actuators" class="hash-link" aria-label="Direct link to Introduction to Actuators" title="Direct link to Introduction to Actuators" translate="no">​</a></h2>
+<p>Actuators are the components that enable robots to interact with their environment through motion and force. They serve as the &quot;muscles&quot; of robotic systems, converting energy (typically electrical) into mechanical motion. Proper actuator control is essential for achieving precise, reliable, and safe robot behavior.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="types-of-actuators">Types of Actuators<a href="#types-of-actuators" class="hash-link" aria-label="Direct link to Types of Actuators" title="Direct link to Types of Actuators" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="electric-motors">Electric Motors<a href="#electric-motors" class="hash-link" aria-label="Direct link to Electric Motors" title="Direct link to Electric Motors" translate="no">​</a></h3>
+<p>The most common actuators in robotics:</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="dc-motors">DC Motors<a href="#dc-motors" class="hash-link" aria-label="Direct link to DC Motors" title="Direct link to DC Motors" translate="no">​</a></h4>
+<ul>
+<li class="">Simple construction and control</li>
+<li class="">High speed, moderate torque</li>
+<li class="">Used in mobile robots and simple mechanisms</li>
+<li class="">Control: Voltage for speed, PWM for precision</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="stepper-motors">Stepper Motors<a href="#stepper-motors" class="hash-link" aria-label="Direct link to Stepper Motors" title="Direct link to Stepper Motors" translate="no">​</a></h4>
+<ul>
+<li class="">Precise position control without feedback</li>
+<li class="">Discrete angular steps (typically 1.8°)</li>
+<li class="">Hold position when powered</li>
+<li class="">Applications: 3D printers, CNC machines</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="servo-motors">Servo Motors<a href="#servo-motors" class="hash-link" aria-label="Direct link to Servo Motors" title="Direct link to Servo Motors" translate="no">​</a></h4>
+<ul>
+<li class="">Integrated motor, encoder, and controller</li>
+<li class="">Precise position, velocity, and torque control</li>
+<li class="">Feedback for closed-loop control</li>
+<li class="">Applications: Robot joints, camera positioning</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="brushless-dc-bldc-motors">Brushless DC (BLDC) Motors<a href="#brushless-dc-bldc-motors" class="hash-link" aria-label="Direct link to Brushless DC (BLDC) Motors" title="Direct link to Brushless DC (BLDC) Motors" translate="no">​</a></h4>
+<ul>
+<li class="">Higher efficiency and longer life</li>
+<li class="">Electronic commutation</li>
+<li class="">Higher power density</li>
+<li class="">Applications: Drones, high-performance robots</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="hydraulic-actuators">Hydraulic Actuators<a href="#hydraulic-actuators" class="hash-link" aria-label="Direct link to Hydraulic Actuators" title="Direct link to Hydraulic Actuators" translate="no">​</a></h3>
+<ul>
+<li class="">High force-to-weight ratio</li>
+<li class="">Precise control with high bandwidth</li>
+<li class="">Used in heavy-duty applications</li>
+<li class="">Challenges: Complexity, maintenance, sealing</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="pneumatic-actuators">Pneumatic Actuators<a href="#pneumatic-actuators" class="hash-link" aria-label="Direct link to Pneumatic Actuators" title="Direct link to Pneumatic Actuators" translate="no">​</a></h3>
+<ul>
+<li class="">Clean operation (no oil contamination)</li>
+<li class="">High force for size</li>
+<li class="">Simpler than hydraulic systems</li>
+<li class="">Compressibility affects precision</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="shape-memory-alloys-smas">Shape Memory Alloys (SMAs)<a href="#shape-memory-alloys-smas" class="hash-link" aria-label="Direct link to Shape Memory Alloys (SMAs)" title="Direct link to Shape Memory Alloys (SMAs)" translate="no">​</a></h3>
+<ul>
+<li class="">Solid-state actuation</li>
+<li class="">Large force in small package</li>
+<li class="">Slow response time</li>
+<li class="">Applications: Micro-robots, grippers</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="control-architectures">Control Architectures<a href="#control-architectures" class="hash-link" aria-label="Direct link to Control Architectures" title="Direct link to Control Architectures" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="open-loop-control">Open-Loop Control<a href="#open-loop-control" class="hash-link" aria-label="Direct link to Open-Loop Control" title="Direct link to Open-Loop Control" translate="no">​</a></h3>
+<ul>
+<li class="">No feedback from actuator</li>
+<li class="">Pre-programmed commands</li>
+<li class="">Simple but imprecise</li>
+<li class="">Suitable for predictable environments</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="closed-loop-control">Closed-Loop Control<a href="#closed-loop-control" class="hash-link" aria-label="Direct link to Closed-Loop Control" title="Direct link to Closed-Loop Control" translate="no">​</a></h3>
+<ul>
+<li class="">Feedback from encoders/sensors</li>
+<li class="">Error correction</li>
+<li class="">More robust to disturbances</li>
+<li class="">Essential for precise control</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="cascade-control">Cascade Control<a href="#cascade-control" class="hash-link" aria-label="Direct link to Cascade Control" title="Direct link to Cascade Control" translate="no">​</a></h3>
+<ul>
+<li class="">Multiple control loops in series</li>
+<li class="">Inner loop: Current/Torque control</li>
+<li class="">Middle loop: Velocity control</li>
+<li class="">Outer loop: Position control</li>
+<li class="">Optimal bandwidth allocation</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="control-techniques">Control Techniques<a href="#control-techniques" class="hash-link" aria-label="Direct link to Control Techniques" title="Direct link to Control Techniques" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="pid-control">PID Control<a href="#pid-control" class="hash-link" aria-label="Direct link to PID Control" title="Direct link to PID Control" translate="no">​</a></h3>
+<ul>
+<li class="">Proportional-Integral-Derivative</li>
+<li class="">Tuning: Kp, Ki, Kd parameters</li>
+<li class="">Stable for most applications</li>
+<li class="">Integral windup protection needed</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="feedforward-control">Feedforward Control<a href="#feedforward-control" class="hash-link" aria-label="Direct link to Feedforward Control" title="Direct link to Feedforward Control" translate="no">​</a></h3>
+<ul>
+<li class="">Anticipates required control effort</li>
+<li class="">Compensates for known dynamics</li>
+<li class="">Improves tracking performance</li>
+<li class="">Requires accurate system model</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="model-based-control">Model-Based Control<a href="#model-based-control" class="hash-link" aria-label="Direct link to Model-Based Control" title="Direct link to Model-Based Control" translate="no">​</a></h3>
+<ul>
+<li class="">Uses system dynamics model</li>
+<li class="">Predictive control techniques</li>
+<li class="">Optimal control (LQR, MPC)</li>
+<li class="">Robust control methods</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="adaptive-control">Adaptive Control<a href="#adaptive-control" class="hash-link" aria-label="Direct link to Adaptive Control" title="Direct link to Adaptive Control" translate="no">​</a></h3>
+<ul>
+<li class="">Adjusts parameters online</li>
+<li class="">Handles parameter variations</li>
+<li class="">Model reference adaptive control</li>
+<li class="">Self-tuning regulators</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="motion-control">Motion Control<a href="#motion-control" class="hash-link" aria-label="Direct link to Motion Control" title="Direct link to Motion Control" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="position-control">Position Control<a href="#position-control" class="hash-link" aria-label="Direct link to Position Control" title="Direct link to Position Control" translate="no">​</a></h3>
+<ul>
+<li class="">Desired position trajectory</li>
+<li class="">PID with position feedback</li>
+<li class="">Trajectory generation (trapezoidal, S-curve)</li>
+<li class="">Velocity and acceleration limits</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="velocity-control">Velocity Control<a href="#velocity-control" class="hash-link" aria-label="Direct link to Velocity Control" title="Direct link to Velocity Control" translate="no">​</a></h3>
+<ul>
+<li class="">Desired velocity trajectory</li>
+<li class="">PID with velocity feedback</li>
+<li class="">Useful for continuous motion</li>
+<li class="">Lower precision than position control</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="torqueforce-control">Torque/Force Control<a href="#torqueforce-control" class="hash-link" aria-label="Direct link to Torque/Force Control" title="Direct link to Torque/Force Control" translate="no">​</a></h3>
+<ul>
+<li class="">Desired force/effort control</li>
+<li class="">Requires force/torque sensors</li>
+<li class="">Essential for compliant motion</li>
+<li class="">Applications: Assembly, manipulation</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="impedance-control">Impedance Control<a href="#impedance-control" class="hash-link" aria-label="Direct link to Impedance Control" title="Direct link to Impedance Control" translate="no">​</a></h3>
+<ul>
+<li class="">Control apparent mechanical impedance</li>
+<li class="">Simulate springs, dampers, masses</li>
+<li class="">Safe human-robot interaction</li>
+<li class="">Adaptive to environment</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="advanced-control-methods">Advanced Control Methods<a href="#advanced-control-methods" class="hash-link" aria-label="Direct link to Advanced Control Methods" title="Direct link to Advanced Control Methods" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="computed-torque-control">Computed Torque Control<a href="#computed-torque-control" class="hash-link" aria-label="Direct link to Computed Torque Control" title="Direct link to Computed Torque Control" translate="no">​</a></h3>
+<ul>
+<li class="">Inverse dynamics compensation</li>
+<li class="">Linearizes system dynamics</li>
+<li class="">Requires accurate model</li>
+<li class="">High-performance tracking</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="operational-space-control">Operational Space Control<a href="#operational-space-control" class="hash-link" aria-label="Direct link to Operational Space Control" title="Direct link to Operational Space Control" translate="no">​</a></h3>
+<ul>
+<li class="">Control in task space (Cartesian)</li>
+<li class="">Decouples task from joint space</li>
+<li class="">Useful for manipulation</li>
+<li class="">Handles redundancy naturally</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="optimal-control">Optimal Control<a href="#optimal-control" class="hash-link" aria-label="Direct link to Optimal Control" title="Direct link to Optimal Control" translate="no">​</a></h3>
+<ul>
+<li class="">Minimize cost function</li>
+<li class="">Consider constraints</li>
+<li class="">Model Predictive Control (MPC)</li>
+<li class="">Real-time optimization</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="learning-based-control">Learning-Based Control<a href="#learning-based-control" class="hash-link" aria-label="Direct link to Learning-Based Control" title="Direct link to Learning-Based Control" translate="no">​</a></h3>
+<ul>
+<li class="">Adaptive to unknown dynamics</li>
+<li class="">Reinforcement learning</li>
+<li class="">Imitation learning</li>
+<li class="">Neural network controllers</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="safety-and-limitations">Safety and Limitations<a href="#safety-and-limitations" class="hash-link" aria-label="Direct link to Safety and Limitations" title="Direct link to Safety and Limitations" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="physical-limits">Physical Limits<a href="#physical-limits" class="hash-link" aria-label="Direct link to Physical Limits" title="Direct link to Physical Limits" translate="no">​</a></h3>
+<ul>
+<li class="">Current/torque limits</li>
+<li class="">Velocity limits</li>
+<li class="">Position limits (joint limits)</li>
+<li class="">Thermal limits</li>
+<li class="">Rate limits</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="safety-mechanisms">Safety Mechanisms<a href="#safety-mechanisms" class="hash-link" aria-label="Direct link to Safety Mechanisms" title="Direct link to Safety Mechanisms" translate="no">​</a></h3>
+<ul>
+<li class="">Emergency stops</li>
+<li class="">Position/velocity clamping</li>
+<li class="">Collision detection</li>
+<li class="">Safe torque off (STO)</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="protection-systems">Protection Systems<a href="#protection-systems" class="hash-link" aria-label="Direct link to Protection Systems" title="Direct link to Protection Systems" translate="no">​</a></h3>
+<ul>
+<li class="">Overcurrent protection</li>
+<li class="">Overtemperature protection</li>
+<li class="">Overvoltage protection</li>
+<li class="">Mechanical stops</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="communication-protocols">Communication Protocols<a href="#communication-protocols" class="hash-link" aria-label="Direct link to Communication Protocols" title="Direct link to Communication Protocols" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="can-bus">CAN Bus<a href="#can-bus" class="hash-link" aria-label="Direct link to CAN Bus" title="Direct link to CAN Bus" translate="no">​</a></h3>
+<ul>
+<li class="">Robust, real-time communication</li>
+<li class="">Widely used in robotics</li>
+<li class="">Distributed control capability</li>
+<li class="">Error detection and recovery</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="ethercat">EtherCAT<a href="#ethercat" class="hash-link" aria-label="Direct link to EtherCAT" title="Direct link to EtherCAT" translate="no">​</a></h3>
+<ul>
+<li class="">High-speed, deterministic</li>
+<li class="">Real-time performance</li>
+<li class="">Distributed clocks</li>
+<li class="">Synchronized operation</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="rs-485">RS-485<a href="#rs-485" class="hash-link" aria-label="Direct link to RS-485" title="Direct link to RS-485" translate="no">​</a></h3>
+<ul>
+<li class="">Long-distance communication</li>
+<li class="">Multi-drop capability</li>
+<li class="">Lower cost than CAN</li>
+<li class="">Requires protocol layer</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="ethernet">Ethernet<a href="#ethernet" class="hash-link" aria-label="Direct link to Ethernet" title="Direct link to Ethernet" translate="no">​</a></h3>
+<ul>
+<li class="">High bandwidth</li>
+<li class="">IP-based communication</li>
+<li class="">Integration with IT systems</li>
+<li class="">Real-time variants (Profinet, EtherNet/IP)</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="integration-with-ros-2">Integration with ROS 2<a href="#integration-with-ros-2" class="hash-link" aria-label="Direct link to Integration with ROS 2" title="Direct link to Integration with ROS 2" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="control-architecture">Control Architecture<a href="#control-architecture" class="hash-link" aria-label="Direct link to Control Architecture" title="Direct link to Control Architecture" translate="no">​</a></h3>
+<ul>
+<li class=""><code>ros2_control</code> framework</li>
+<li class="">Hardware interface abstraction</li>
+<li class="">Controller manager</li>
+<li class="">Real-time safety</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="controller-types">Controller Types<a href="#controller-types" class="hash-link" aria-label="Direct link to Controller Types" title="Direct link to Controller Types" translate="no">​</a></h3>
+<ul>
+<li class="">Joint trajectory controllers</li>
+<li class="">Position, velocity, effort controllers</li>
+<li class="">Forward command controllers</li>
+<li class="">Custom controllers</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="real-time-considerations">Real-Time Considerations<a href="#real-time-considerations" class="hash-link" aria-label="Direct link to Real-Time Considerations" title="Direct link to Real-Time Considerations" translate="no">​</a></h3>
+<ul>
+<li class="">Real-time kernel</li>
+<li class="">Deterministic scheduling</li>
+<li class="">Memory pre-allocation</li>
+<li class="">Avoid dynamic allocation</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="testing-and-validation">Testing and Validation<a href="#testing-and-validation" class="hash-link" aria-label="Direct link to Testing and Validation" title="Direct link to Testing and Validation" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="unit-testing">Unit Testing<a href="#unit-testing" class="hash-link" aria-label="Direct link to Unit Testing" title="Direct link to Unit Testing" translate="no">​</a></h3>
+<ul>
+<li class="">Individual actuator functionality</li>
+<li class="">Control algorithm verification</li>
+<li class="">Safety limit validation</li>
+<li class="">Communication testing</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="integration-testing">Integration Testing<a href="#integration-testing" class="hash-link" aria-label="Direct link to Integration Testing" title="Direct link to Integration Testing" translate="no">​</a></h3>
+<ul>
+<li class="">Multi-actuator coordination</li>
+<li class="">Trajectory tracking accuracy</li>
+<li class="">Force control performance</li>
+<li class="">Safety system validation</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="system-testing">System Testing<a href="#system-testing" class="hash-link" aria-label="Direct link to System Testing" title="Direct link to System Testing" translate="no">​</a></h3>
+<ul>
+<li class="">Full robot operation</li>
+<li class="">Task execution validation</li>
+<li class="">Safety scenario testing</li>
+<li class="">Long-term reliability</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="performance-metrics">Performance Metrics<a href="#performance-metrics" class="hash-link" aria-label="Direct link to Performance Metrics" title="Direct link to Performance Metrics" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="tracking-performance">Tracking Performance<a href="#tracking-performance" class="hash-link" aria-label="Direct link to Tracking Performance" title="Direct link to Tracking Performance" translate="no">​</a></h3>
+<ul>
+<li class="">Position error</li>
+<li class="">Velocity error</li>
+<li class="">Settling time</li>
+<li class="">Overshoot</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="dynamic-performance">Dynamic Performance<a href="#dynamic-performance" class="hash-link" aria-label="Direct link to Dynamic Performance" title="Direct link to Dynamic Performance" translate="no">​</a></h3>
+<ul>
+<li class="">Bandwidth</li>
+<li class="">Phase margin</li>
+<li class="">Disturbance rejection</li>
+<li class="">Noise sensitivity</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="efficiency">Efficiency<a href="#efficiency" class="hash-link" aria-label="Direct link to Efficiency" title="Direct link to Efficiency" translate="no">​</a></h3>
+<ul>
+<li class="">Power consumption</li>
+<li class="">Heat generation</li>
+<li class="">Response time</li>
+<li class="">Accuracy</li>
+</ul>
+<p>Proper actuator control is fundamental to robotic performance, enabling precise, safe, and reliable operation. Understanding the various control techniques and their applications is essential for developing effective robotic systems.</p></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col noPrint_WFHX"><a href="https://github.com/hafizsiddiqui1211/physical-ai-humanoid-robotics-textbook/tree/main/docusaurus/docs/systems/actuator-control.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/physical-ai-humanoid-robotics-textbook/docs/systems/sensor-integration"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Sensor Integration</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/physical-ai-humanoid-robotics-textbook/docs/simulation/digital-twin-gazebo"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Digital Twin: Gazebo Simulation</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#introduction-to-actuators" class="table-of-contents__link toc-highlight">Introduction to Actuators</a></li><li><a href="#types-of-actuators" class="table-of-contents__link toc-highlight">Types of Actuators</a><ul><li><a href="#electric-motors" class="table-of-contents__link toc-highlight">Electric Motors</a></li><li><a href="#hydraulic-actuators" class="table-of-contents__link toc-highlight">Hydraulic Actuators</a></li><li><a href="#pneumatic-actuators" class="table-of-contents__link toc-highlight">Pneumatic Actuators</a></li><li><a href="#shape-memory-alloys-smas" class="table-of-contents__link toc-highlight">Shape Memory Alloys (SMAs)</a></li></ul></li><li><a href="#control-architectures" class="table-of-contents__link toc-highlight">Control Architectures</a><ul><li><a href="#open-loop-control" class="table-of-contents__link toc-highlight">Open-Loop Control</a></li><li><a href="#closed-loop-control" class="table-of-contents__link toc-highlight">Closed-Loop Control</a></li><li><a href="#cascade-control" class="table-of-contents__link toc-highlight">Cascade Control</a></li></ul></li><li><a href="#control-techniques" class="table-of-contents__link toc-highlight">Control Techniques</a><ul><li><a href="#pid-control" class="table-of-contents__link toc-highlight">PID Control</a></li><li><a href="#feedforward-control" class="table-of-contents__link toc-highlight">Feedforward Control</a></li><li><a href="#model-based-control" class="table-of-contents__link toc-highlight">Model-Based Control</a></li><li><a href="#adaptive-control" class="table-of-contents__link toc-highlight">Adaptive Control</a></li></ul></li><li><a href="#motion-control" class="table-of-contents__link toc-highlight">Motion Control</a><ul><li><a href="#position-control" class="table-of-contents__link toc-highlight">Position Control</a></li><li><a href="#velocity-control" class="table-of-contents__link toc-highlight">Velocity Control</a></li><li><a href="#torqueforce-control" class="table-of-contents__link toc-highlight">Torque/Force Control</a></li><li><a href="#impedance-control" class="table-of-contents__link toc-highlight">Impedance Control</a></li></ul></li><li><a href="#advanced-control-methods" class="table-of-contents__link toc-highlight">Advanced Control Methods</a><ul><li><a href="#computed-torque-control" class="table-of-contents__link toc-highlight">Computed Torque Control</a></li><li><a href="#operational-space-control" class="table-of-contents__link toc-highlight">Operational Space Control</a></li><li><a href="#optimal-control" class="table-of-contents__link toc-highlight">Optimal Control</a></li><li><a href="#learning-based-control" class="table-of-contents__link toc-highlight">Learning-Based Control</a></li></ul></li><li><a href="#safety-and-limitations" class="table-of-contents__link toc-highlight">Safety and Limitations</a><ul><li><a href="#physical-limits" class="table-of-contents__link toc-highlight">Physical Limits</a></li><li><a href="#safety-mechanisms" class="table-of-contents__link toc-highlight">Safety Mechanisms</a></li><li><a href="#protection-systems" class="table-of-contents__link toc-highlight">Protection Systems</a></li></ul></li><li><a href="#communication-protocols" class="table-of-contents__link toc-highlight">Communication Protocols</a><ul><li><a href="#can-bus" class="table-of-contents__link toc-highlight">CAN Bus</a></li><li><a href="#ethercat" class="table-of-contents__link toc-highlight">EtherCAT</a></li><li><a href="#rs-485" class="table-of-contents__link toc-highlight">RS-485</a></li><li><a href="#ethernet" class="table-of-contents__link toc-highlight">Ethernet</a></li></ul></li><li><a href="#integration-with-ros-2" class="table-of-contents__link toc-highlight">Integration with ROS 2</a><ul><li><a href="#control-architecture" class="table-of-contents__link toc-highlight">Control Architecture</a></li><li><a href="#controller-types" class="table-of-contents__link toc-highlight">Controller Types</a></li><li><a href="#real-time-considerations" class="table-of-contents__link toc-highlight">Real-Time Considerations</a></li></ul></li><li><a href="#testing-and-validation" class="table-of-contents__link toc-highlight">Testing and Validation</a><ul><li><a href="#unit-testing" class="table-of-contents__link toc-highlight">Unit Testing</a></li><li><a href="#integration-testing" class="table-of-contents__link toc-highlight">Integration Testing</a></li><li><a href="#system-testing" class="table-of-contents__link toc-highlight">System Testing</a></li></ul></li><li><a href="#performance-metrics" class="table-of-contents__link toc-highlight">Performance Metrics</a><ul><li><a href="#tracking-performance" class="table-of-contents__link toc-highlight">Tracking Performance</a></li><li><a href="#dynamic-performance" class="table-of-contents__link toc-highlight">Dynamic Performance</a></li><li><a href="#efficiency" class="table-of-contents__link toc-highlight">Efficiency</a></li></ul></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Content</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/physical-ai-humanoid-robotics-textbook/docs/intro">Textbook</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://stackoverflow.com/questions/tagged/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">Stack Overflow<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://discordapp.com/invite/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">Discord<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://github.com/facebook/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2025 Physical AI & Humanoid Robotics Textbook. Built with Docusaurus.</div></div></div></footer></div>
+</body>
+</html>
